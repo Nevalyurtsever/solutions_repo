@@ -167,3 +167,4 @@ v
 
 ​
 sin(2θ)
+![alt text](image-1.png)
