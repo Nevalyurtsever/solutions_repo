@@ -378,4 +378,165 @@ increases the range, while increasing
 𝑔
 g decreases it.
 
-Limitations: This model assumes no air resistance, which in real-world scenarios would shift the optimal launch angle slightly lower.
+## Limitations: This model assumes no air resistance, which in real-world scenarios would shift the optimal launch angle slightly lower.
+
+1-3
+Here are the basic mathematical equations for projectile motion:
+
+1. Motion Equations
+   When a projectile is launched with initial velocity
+   𝑣
+   0
+   v
+   0
+   ​
+   at an angle
+   𝜃
+   θ:
+
+Horizontal Motion:
+
+𝑥
+(
+𝑡
+)
+=
+𝑣
+0
+cos
+⁡
+(
+𝜃
+)
+⋅
+𝑡
+x(t)=v
+0
+​
+cos(θ)⋅t
+Vertical Motion:
+
+𝑦
+(
+𝑡
+)
+=
+𝑣
+0
+sin
+⁡
+(
+𝜃
+)
+⋅
+𝑡
+−
+1
+2
+𝑔
+𝑡
+2
+y(t)=v
+0
+​
+sin(θ)⋅t−
+2
+1
+​
+gt
+2
+
+2. Flight Time
+   The total time of flight can be found by setting
+   𝑦
+   =
+   0
+   y=0 (when the projectile hits the ground):
+
+𝑡
+flight
+=
+2
+𝑣
+0
+sin
+⁡
+(
+𝜃
+)
+𝑔
+t
+flight
+​
+=
+g
+2v
+0
+​
+sin(θ)
+​
+
+3. Maximum Height
+   The maximum height occurs when the vertical velocity is zero (
+   𝑣
+   𝑦
+   =
+   0
+   v
+   y
+   ​
+   =0):
+
+ℎ
+max
+=
+(
+𝑣
+0
+sin
+⁡
+(
+𝜃
+)
+)
+2
+2
+𝑔
+h
+max
+​
+=
+2g
+(v
+0
+​
+sin(θ))
+2
+
+​
+
+4. Range (Maximum Horizontal Distance)
+   The horizontal range or distance traveled is given by:
+
+# 𝑅
+
+𝑣
+0
+2
+sin
+⁡
+(
+2
+𝜃
+)
+𝑔
+R=
+g
+v
+0
+2
+​
+sin(2θ)
+​
+
+![alt text](image-3.png)
