@@ -669,7 +669,91 @@ v
 ​
 sin(2θ)
 ​</p>
-<p><img alt="alt text" src="../image-3.png"/></p>
+<h2 id="_1"><img alt="alt text" src="../image-3.png"/></h2>
+<p>1-4
+Project Summary: Simulation and Analysis of Projectile Motion
+Motivation:
+Projectile motion is an essential concept in physics that demonstrates the relationship between velocity, launch angle, and distance. While the problem of analyzing range as a function of the launch angle is simple, it highlights rich principles that apply to various real-world phenomena, from sports to rocket trajectories.</p>
+<p>Objective:
+The goal is to create a computational tool to simulate projectile motion and visualize the range of the projectile as a function of the launch angle, considering different initial conditions such as initial velocity, gravitational acceleration, and launch height.</p>
+<p>Implementation Plan:</p>
+<p>Mathematical Model:</p>
+<p>Horizontal motion:</p>
+<p>𝑥
+(
+𝑡
+)
+=
+𝑣
+0
+cos
+⁡
+(
+𝜃
+)
+⋅
+𝑡
+x(t)=v 
+0
+​
+ cos(θ)⋅t
+Vertical motion:</p>
+<p>𝑦
+(
+𝑡
+)
+=
+𝑣
+0
+sin
+⁡
+(
+𝜃
+)
+⋅
+𝑡
+−
+1
+2
+𝑔
+𝑡
+2
+y(t)=v 
+0
+​
+ sin(θ)⋅t− 
+2
+1
+​
+ gt 
+2</p>
+<p>Where 
+𝑣
+0
+v 
+0
+​
+  is the initial velocity, 
+𝜃
+θ is the angle of projection, and 
+𝑔
+g is gravitational acceleration.</p>
+<p>Computational Tool:</p>
+<p>Use Python, with NumPy for calculations and Matplotlib for visualizations, to simulate projectile motion under various initial conditions.</p>
+<p>Simulation:</p>
+<p>Compute the range of the projectile for each launch angle and plot the range against the angle.</p>
+<p>Vary parameters like initial velocity, gravity, and height to see their effects on the range.</p>
+<p>Visualizations:</p>
+<p>Plot range vs. launch angle for different initial velocities.</p>
+<p>Show how maximum range changes with varying launch angles for different speeds.</p>
+<p>Analysis:</p>
+<p>Explore how different parameters (velocity, angle, gravity, and height) influence the trajectory and range.</p>
+<p>Identify the optimal launch angle for maximum range.</p>
+<p>Limitations:</p>
+<p>The idealized model assumes no air resistance, constant gravity, and a flat launch surface.</p>
+<p>Discuss the impact of air resistance, wind, and varying launch heights, and propose ways to include these in more realistic models.
+<img alt="alt text" src="../image-4.png"/>
+<img alt="alt text" src="../image-5.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
