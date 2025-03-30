@@ -540,3 +540,109 @@ sin(2θ)
 ​
 
 ![alt text](image-3.png)
+---------------------------------------------------------------------------
+1-4
+Project Summary: Simulation and Analysis of Projectile Motion
+Motivation:
+Projectile motion is an essential concept in physics that demonstrates the relationship between velocity, launch angle, and distance. While the problem of analyzing range as a function of the launch angle is simple, it highlights rich principles that apply to various real-world phenomena, from sports to rocket trajectories.
+
+Objective:
+The goal is to create a computational tool to simulate projectile motion and visualize the range of the projectile as a function of the launch angle, considering different initial conditions such as initial velocity, gravitational acceleration, and launch height.
+
+Implementation Plan:
+
+Mathematical Model:
+
+Horizontal motion:
+
+𝑥
+(
+𝑡
+)
+=
+𝑣
+0
+cos
+⁡
+(
+𝜃
+)
+⋅
+𝑡
+x(t)=v 
+0
+​
+ cos(θ)⋅t
+Vertical motion:
+
+𝑦
+(
+𝑡
+)
+=
+𝑣
+0
+sin
+⁡
+(
+𝜃
+)
+⋅
+𝑡
+−
+1
+2
+𝑔
+𝑡
+2
+y(t)=v 
+0
+​
+ sin(θ)⋅t− 
+2
+1
+​
+ gt 
+2
+ 
+Where 
+𝑣
+0
+v 
+0
+​
+  is the initial velocity, 
+𝜃
+θ is the angle of projection, and 
+𝑔
+g is gravitational acceleration.
+
+Computational Tool:
+
+Use Python, with NumPy for calculations and Matplotlib for visualizations, to simulate projectile motion under various initial conditions.
+
+Simulation:
+
+Compute the range of the projectile for each launch angle and plot the range against the angle.
+
+Vary parameters like initial velocity, gravity, and height to see their effects on the range.
+
+Visualizations:
+
+Plot range vs. launch angle for different initial velocities.
+
+Show how maximum range changes with varying launch angles for different speeds.
+
+Analysis:
+
+Explore how different parameters (velocity, angle, gravity, and height) influence the trajectory and range.
+
+Identify the optimal launch angle for maximum range.
+
+Limitations:
+
+The idealized model assumes no air resistance, constant gravity, and a flat launch surface.
+
+Discuss the impact of air resistance, wind, and varying launch heights, and propose ways to include these in more realistic models.
+![alt text](image-4.png)
+![alt text](image-5.png)
