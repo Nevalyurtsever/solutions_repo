@@ -373,3 +373,36 @@ res
 This is where energy input from the external force is most efficiently transferred to the system.
 
 ![alt text](image-6.png)
+2-1-2 2. Analysis of Dynamics (Summary)
+The behavior of a forced damped pendulum depends on three main parameters:
+
+Damping (
+𝛾
+γ):
+
+Low damping allows sustained oscillations and sharp resonance.
+
+High damping suppresses motion and reduces resonance.
+
+Driving Amplitude (A):
+
+Small amplitudes produce regular, periodic motion.
+
+Large amplitudes can lead to complex or chaotic behavior.
+
+Driving Frequency (
+𝜔
+ω):
+
+When near the natural frequency, the system experiences resonance, with large oscillations.
+
+Away from resonance, the system may still show periodic, quasiperiodic, or chaotic motion depending on
+𝐴
+A and
+𝛾
+γ.
+
+As parameters change, the pendulum can transition from simple harmonic motion to chaos, often through a process called period doubling. These behaviors are best visualized using time series, phase portraits, and Poincaré sections.
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
