@@ -149,3 +149,91 @@ sun
 
 ​
 ![alt text](image-6.png)
+2-3
+3.1 Definitions and Physical Meaning:
+This task builds on the previously defined concepts of escape velocity and cosmic velocities. The cosmic velocities are critical for understanding how to leave the gravitational influence of various celestial bodies:
+
+First Cosmic Velocity: Orbital velocity needed to stay in a stable orbit around a celestial body.
+
+Second Cosmic Velocity: Escape velocity needed to break free from the gravitational pull of a celestial body.
+
+Third Cosmic Velocity: Escape velocity needed to leave the gravitational influence of the solar system.
+
+These velocities depend on two primary parameters:
+
+Mass of the celestial body (more massive bodies require higher velocities to escape).
+
+Radius of the celestial body (closer distances to the center of the body require higher velocities).
+
+3.2 Parameters and Formulae:
+Orbital Velocity (v₁):
+
+𝑣
+1
+=
+𝐺
+𝑀
+𝑟
+v
+1
+​
+=
+r
+GM
+​
+
+​
+
+Where:
+
+𝐺
+G = Gravitational constant
+
+𝑀
+M = Mass of the celestial body
+
+𝑟
+r = Orbital radius
+
+Escape Velocity (v₂):
+
+𝑣
+2
+=
+2
+𝐺
+𝑀
+𝑟
+v
+2
+​
+=
+r
+2GM
+​
+
+​
+
+Solar System Escape Velocity (v₃):
+
+𝑣
+3
+=
+3
+𝐺
+𝑀
+sun
+𝑟
+v
+3
+​
+=
+r
+3GM
+sun
+​
+
+​
+
+​
+![alt text](image-7.png)
