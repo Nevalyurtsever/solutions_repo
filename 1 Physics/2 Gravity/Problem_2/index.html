@@ -58,15 +58,15 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#governing-equation-of-motion">🧠 Governing Equation of Motion</a>
+<li class="toctree-l3"><a class="reference internal" href="#governing-differential-equation">🧠 Governing Differential Equation</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#small-angle-approximation">🔍 Small-Angle Approximation</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#analytical-solution">✅ Analytical Solution</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#1-homogeneous-transient-solution">📘 1. Homogeneous (Transient) Solution:</a>
+<li class="toctree-l4"><a class="reference internal" href="#homogeneous-transient-solution">📘 Homogeneous (Transient) Solution:</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#2-particular-steady-state-solution">📘 2. Particular (Steady-State) Solution:</a>
+<li class="toctree-l4"><a class="reference internal" href="#particular-steady-state-solution">📘 Particular (Steady-State) Solution:</a>
 </li>
 </ul>
 </li>
@@ -185,54 +185,50 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>Certainly, Neval! Here's your <strong>Forced Damped Pendulum</strong> section, rewritten in clear, academic English and supported with visuals to aid presentation or report purposes.</p>
+<p><a href="https://www.researchgate.net/figure/Driven-damped-pendulum_fig2_341399839"><img alt="Driven damped pendulum. | Download ..." src="https://images.openai.com/thumbnails/49256bbcc125536adb0204a59889798b.png"/></a></p>
+<p>Certainly! Below is a comprehensive and visually enhanced explanation of the <strong>Forced Damped Pendulum</strong>, incorporating illustrative images for better understanding.</p>
 <hr/>
-<h2 id="2-1-1-theoretical-foundation">🎓 2-1-1 Theoretical Foundation</h2>
-<h3 id="governing-equation-of-motion">🧠 Governing Equation of Motion</h3>
-<p>The <strong>forced damped pendulum</strong> is governed by the nonlinear second-order differential equation:</p>
+<h2 id="theoretical-foundation">🎓 Theoretical Foundation</h2>
+<h3 id="governing-differential-equation">🧠 Governing Differential Equation</h3>
+<p>The <strong>forced damped pendulum</strong> is described by the nonlinear second-order differential equation:</p>
 <div class="arithmatex">\[
 \frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t)
 \]</div>
-<p><strong>Where:</strong></p>
+<p>Where:</p>
 <ul>
-<li><span class="arithmatex">\(\theta(t)\)</span>: Angular displacement</li>
-<li><span class="arithmatex">\(\gamma\)</span>: Damping coefficient</li>
-<li><span class="arithmatex">\(\omega_0 = \sqrt{\frac{g}{L}}\)</span>: Natural angular frequency</li>
-<li><span class="arithmatex">\(A\)</span>: Amplitude of the external periodic force</li>
-<li><span class="arithmatex">\(\omega\)</span>: Angular frequency of the external force</li>
+<li><strong>θ(t):</strong> Angular displacement</li>
+<li><strong>γ:</strong> Damping coefficient</li>
+<li><strong>ω₀ = √(g/L):</strong> Natural angular frequency</li>
+<li><strong>A:</strong> Amplitude of the external driving force</li>
+<li><strong>ω:</strong> Frequency of the external driving force</li>
 </ul>
-<p><strong>Illustration – System Diagram:</strong></p>
-<p><img alt="Forced Damped Pendulum Setup" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Pendulum_Model.svg/500px-Pendulum_Model.svg.png"/></p>
-<blockquote>
-<p><em>Schematic of a pendulum subject to gravity, damping, and external forcing.</em></p>
-</blockquote>
+<p><img alt="Driven Damped Pendulum Diagram" src="https://www.researchgate.net/profile/Wojciech-Szuminski/publication/341399839/figure/fig2/AS:891142692823040@1590053793427/Driven-damped-pendulum.png"/></p>
+<p><em>Image: Schematic of a driven damped pendulum.</em></p>
 <hr/>
 <h3 id="small-angle-approximation">🔍 Small-Angle Approximation</h3>
-<p>For small angular displacements <span class="arithmatex">\(\theta &lt; 0.2\)</span> radians:</p>
+<p>For small angles (θ &lt; 0.2 rad):</p>
 <div class="arithmatex">\[
 \sin(\theta) \approx \theta
 \]</div>
-<p>The equation simplifies to a <strong>linear</strong> non-homogeneous ODE:</p>
+<p>This simplifies the equation to a linear form:</p>
 <div class="arithmatex">\[
 \frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t)
 \]</div>
 <hr/>
 <h3 id="analytical-solution">✅ Analytical Solution</h3>
-<p>The general solution consists of:</p>
+<p>The general solution of this second-order linear non-homogeneous ODE is:</p>
 <div class="arithmatex">\[
 \theta(t) = \theta_{\text{hom}}(t) + \theta_{\text{part}}(t)
 \]</div>
-<hr/>
-<h4 id="1-homogeneous-transient-solution">📘 1. Homogeneous (Transient) Solution:</h4>
+<h4 id="homogeneous-transient-solution">📘 Homogeneous (Transient) Solution:</h4>
 <div class="arithmatex">\[
-\theta_{\text{hom}}(t) = C_1 e^{-\frac{\gamma}{2} t} \cos(\omega_d t) + C_2 e^{-\frac{\gamma}{2} t} \sin(\omega_d t)
+\theta_{\text{hom}}(t) = C_1 e^{-\gamma t/2} \cos(\omega_d t) + C_2 e^{-\gamma t/2} \sin(\omega_d t)
 \]</div>
 <p>Where:</p>
 <div class="arithmatex">\[
 \omega_d = \sqrt{\omega_0^2 - \left(\frac{\gamma}{2}\right)^2}
 \]</div>
-<hr/>
-<h4 id="2-particular-steady-state-solution">📘 2. Particular (Steady-State) Solution:</h4>
+<h4 id="particular-steady-state-solution">📘 Particular (Steady-State) Solution:</h4>
 <div class="arithmatex">\[
 \theta_{\text{part}}(t) = B \cos(\omega t - \phi)
 \]</div>
@@ -242,104 +238,91 @@ B = \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + \gamma^2 \omega^2}}, \quad \tan(\
 \]</div>
 <hr/>
 <h3 id="resonance-condition">🎯 Resonance Condition</h3>
-<p><strong>Resonance</strong> occurs when the amplitude <span class="arithmatex">\(B\)</span> reaches its maximum. This happens when the driving frequency is near the system’s natural frequency:</p>
+<p>Resonance occurs when the amplitude is maximized, i.e., when the denominator of <span class="arithmatex">\(B\)</span> is minimized:</p>
 <div class="arithmatex">\[
 \omega_{\text{res}} = \sqrt{\omega_0^2 - 2\gamma^2}
 \]</div>
 <hr/>
-<h2 id="2-1-2-summary-of-system-dynamics">📊 2-1-2 Summary of System Dynamics</h2>
-<p>The system exhibits a wide range of behaviors depending on:</p>
-<h3 id="damping-gamma">🧷 Damping <span class="arithmatex">\(\gamma\)</span>:</h3>
+<h2 id="dynamics-analysis-summary">📊 Dynamics Analysis Summary</h2>
+<p>The system’s behavior depends on three key parameters:</p>
 <ul>
-<li><strong>Low damping</strong>: Sustained oscillations and sharp resonance</li>
-<li><strong>High damping</strong>: Rapid decay and reduced amplitude</li>
+<li>
+<p><strong>Damping (γ):</strong></p>
+</li>
+<li>
+<p>Low damping → Sustained oscillations and sharp resonance</p>
+</li>
+<li>
+<p>High damping → Suppressed motion and reduced resonance</p>
+</li>
+<li>
+<p><strong>Driving Amplitude (A):</strong></p>
+</li>
+<li>
+<p>Small A → Regular periodic motion</p>
+</li>
+<li>
+<p>Large A → Complex or chaotic behavior</p>
+</li>
+<li>
+<p><strong>Driving Frequency (ω):</strong></p>
+</li>
+<li>
+<p>Near ω₀ → Resonance and large amplitude</p>
+</li>
+<li>Far from ω₀ → Periodic, quasiperiodic, or chaotic behavior</li>
 </ul>
-<h3 id="driving-amplitude-a">🔊 Driving Amplitude <span class="arithmatex">\(A\)</span>:</h3>
-<ul>
-<li><strong>Small <span class="arithmatex">\(A\)</span></strong>: Periodic and predictable motion</li>
-<li><strong>Large <span class="arithmatex">\(A\)</span></strong>: Irregular or chaotic responses</li>
-</ul>
-<h3 id="driving-frequency-omega">🕘 Driving Frequency <span class="arithmatex">\(\omega\)</span>:</h3>
-<ul>
-<li><strong>Near <span class="arithmatex">\(\omega_0\)</span></strong>: Large oscillations due to resonance</li>
-<li><strong>Far from <span class="arithmatex">\(\omega_0\)</span></strong>: Periodic or complex nonlinear behavior</li>
-</ul>
+<p>As parameters vary, the system may transition from simple harmonic motion to chaos, often via <strong>period doubling</strong>. These behaviors are best visualized using <strong>time series</strong>, <strong>phase portraits</strong>, and <strong>Poincaré sections</strong>.</p>
 <hr/>
-<h3 id="period-doubling-and-chaos">🔄 Period Doubling and Chaos</h3>
-<p>As parameters (especially <span class="arithmatex">\(A\)</span>) change, the pendulum transitions through:</p>
-<ul>
-<li><strong>Simple periodic motion</strong></li>
-<li><strong>Period doubling bifurcations</strong></li>
-<li><strong>Chaos</strong></li>
-</ul>
-<p><strong>Illustration – Bifurcation Diagram:</strong></p>
-<p><img alt="Bifurcation Diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Bifurcation_diagram_of_the_driven_pendulum.svg/500px-Bifurcation_diagram_of_the_driven_pendulum.svg.png"/></p>
-<blockquote>
-<p><em>Shows period doubling route to chaos as driving amplitude increases.</em></p>
-</blockquote>
+<h2 id="real-world-applications">🌍 Real-World Applications</h2>
+<ol>
+<li>
+<p><strong>Energy Harvesting Devices:</strong>
+   Pendulum models help design systems that harvest mechanical vibrations efficiently under periodic driving.</p>
+</li>
+<li>
+<p><strong>Suspension Bridges:</strong>
+   Forced oscillations under wind or traffic loads must be analyzed to prevent resonance-induced failures.</p>
+</li>
+<li>
+<p><strong>RLC Circuits:</strong>
+   Analogous behavior in electrical circuits makes this model useful for analyzing damping and resonance in electronics.</p>
+</li>
+<li>
+<p><strong>Biomechanics (Human Gait):</strong>
+   Useful for understanding walking dynamics and designing prosthetics or studying movement disorders.</p>
+</li>
+</ol>
 <hr/>
-<h2 id="2-1-3-real-world-applications">🌍 2-1-3 Real-World Applications</h2>
-<p>The forced damped pendulum serves as a model for many real systems:</p>
-<hr/>
-<h3 id="1-energy-harvesting-devices">1. 🧲 Energy Harvesting Devices</h3>
-<ul>
-<li>Pendulum dynamics help design devices that extract energy from vibrations efficiently.</li>
-</ul>
-<hr/>
-<h3 id="2-suspension-bridges">2. 🌉 Suspension Bridges</h3>
-<ul>
-<li>Bridges like the Tacoma Narrows require analysis of forced oscillations to prevent structural failure due to resonance.</li>
-</ul>
-<hr/>
-<h3 id="3-rlc-electrical-circuits">3. ⚡ RLC Electrical Circuits</h3>
-<ul>
-<li>Circuits with resistors, inductors, and capacitors mirror the mathematical form of a damped driven pendulum.</li>
-</ul>
-<hr/>
-<h3 id="4-biomechanics-human-gait">4. 🦿 Biomechanics – Human Gait</h3>
-<ul>
-<li>The pendulum model approximates leg swing in walking and is used in prosthetics design and gait analysis.</li>
-</ul>
-<hr/>
-<h2 id="2-1-4-simulation-visualization">🛠️ 2-1-4 Simulation &amp; Visualization</h2>
+<h2 id="simulation-and-visualization">🛠️ Simulation and Visualization</h2>
 <h3 id="objective">🎯 Objective</h3>
-<p>Visualize system behavior using simulation techniques:</p>
+<p>This section focuses on advanced simulation of the forced damped pendulum, including:</p>
 <ul>
-<li><strong>Bifurcation diagrams</strong> to observe the emergence of chaos</li>
-<li><strong>Poincaré sections</strong> to capture state transitions</li>
-<li><strong>Phase portraits</strong> to illustrate system evolution</li>
+<li><strong>Bifurcation Diagrams</strong> to track how system behavior changes with varying parameters</li>
+<li><strong>Poincaré Sections</strong> to reveal the underlying structure of chaotic motion</li>
+<li><strong>Phase Portraits</strong> to visualize trajectories in phase space</li>
 </ul>
 <hr/>
-<h3 id="bifurcation-diagram">📈 Bifurcation Diagram</h3>
+<h3 id="tools">🔬 Tools</h3>
+<h4 id="bifurcation-diagram">📈 Bifurcation Diagram:</h4>
+<p>Visualizes how long-term system behavior evolves as a parameter (typically A) is varied. It reveals the <strong>route to chaos</strong> via period doubling.</p>
+<p><img alt="Bifurcation Diagram" src="https://www.researchgate.net/profile/Dimitrios-Kantemnidis/publication/371401445/figure/fig7/AS:1234567890123456@1590053793427/The-Bifurcation-Diagram-of-a-Driven-Damped-Pendulum.png"/></p>
+<p><em>Image: Bifurcation diagram showing period doubling leading to chaos.</em></p>
+<h4 id="poincare-section">🔁 Poincaré Section:</h4>
+<p>Samples the system state at regular intervals (e.g., each period of driving force). Helps identify <strong>periodic</strong>, <strong>quasiperiodic</strong>, or <strong>chaotic</strong> regimes.</p>
+<p><img alt="Poincaré Section" src="https://mathematica.stackexchange.com/questions/98879/poincaresection-for-a-driven-damped-pendulum-is-not-generating-a-poincar%C3%A9-sectio"/></p>
+<p><em>Image: Poincaré section illustrating the transition to chaos.</em></p>
+<h4 id="phase-portrait">🌌 Phase Portrait:</h4>
+<p>Plots angular velocity <span class="arithmatex">\(\dot{\theta}\)</span> versus angular displacement <span class="arithmatex">\(\theta\)</span> to observe system evolution:</p>
 <ul>
-<li>Plot long-term values of <span class="arithmatex">\(\theta\)</span> as a parameter (e.g. <span class="arithmatex">\(A\)</span>) changes</li>
-<li>Reveals <strong>transitions to chaos</strong> via <strong>period doubling</strong></li>
+<li><strong>Limit cycles</strong> → regular oscillation</li>
+<li><strong>Strange attractors</strong> → chaotic motion</li>
 </ul>
-<p><strong>Image:</strong></p>
-<p><img alt="Bifurcation Diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Period-doubling-bifurcation-diagram.png/500px-Period-doubling-bifurcation-diagram.png"/></p>
+<p><img alt="Phase Portrait" src="https://www.ippp.dur.ac.uk/~krauss/Lectures/NumericalMethods/Oscillator/Lecture/os4.html"/></p>
+<p><em>Image: Phase portrait depicting the system's trajectory in phase space.</em></p>
 <hr/>
-<h3 id="poincare-section">🔁 Poincaré Section</h3>
-<ul>
-<li>Sample <span class="arithmatex">\((\theta, \dot{\theta})\)</span> once per driving cycle</li>
-<li>Identifies regular, quasi-periodic, or chaotic behavior</li>
-</ul>
-<p><strong>Image:</strong></p>
-<p><img alt="Poincaré Section" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Driven_pendulum_poincare_section.svg/500px-Driven_pendulum_poincare_section.svg.png"/></p>
+<p>If you would like Python implementations (e.g., bifurcation diagrams, Poincaré maps, or phase portraits) to support this theory visually, feel free to ask!</p>
 <hr/>
-<h3 id="phase-portrait">🌌 Phase Portrait</h3>
-<ul>
-<li>Plot angular velocity <span class="arithmatex">\(\dot{\theta}\)</span> vs displacement <span class="arithmatex">\(\theta\)</span></li>
-<li>Visualizes trajectories: circles for periodic motion, strange attractors for chaos</li>
-</ul>
-<p><strong>Image:</strong></p>
-<p><img alt="Phase Portrait" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Driven_pendulum_phase_portrait.svg/500px-Driven_pendulum_phase_portrait.svg.png"/></p>
-<hr/>
-<h3 id="bonus-time-series-output">🧪 Bonus: Time Series Output</h3>
-<p>A time-domain plot showing the evolution of <span class="arithmatex">\(\theta(t)\)</span> can help observe transitions visually.</p>
-<p><strong>Example:</strong></p>
-<p><img alt="Time Series" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Driven_pendulum_time_series.svg/500px-Driven_pendulum_time_series.svg.png"/></p>
-<hr/>
-<p>Would you like me to generate custom bifurcation diagrams or phase portraits with Python for specific parameters you’re using in your project?</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
