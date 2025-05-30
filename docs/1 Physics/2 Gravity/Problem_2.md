@@ -1,175 +1,67 @@
-[![Driven damped pendulum. | Download ...](https://images.openai.com/thumbnails/49256bbcc125536adb0204a59889798b.png)](https://www.researchgate.net/figure/Driven-damped-pendulum_fig2_341399839)
-
-Certainly! Below is a comprehensive and visually enhanced explanation of the **Forced Damped Pendulum**, incorporating illustrative images for better understanding.
+### ✅ Subtask 1: Define and Derive the First, Second, and Third Cosmic Velocities
 
 ---
 
-## 🎓 Theoretical Foundation
+#### 🧭 **1st Cosmic Velocity** – Orbital Velocity
 
-### 🧠 Governing Differential Equation
+The minimum horizontal velocity required for an object to enter stable circular orbit just above a celestial body’s surface.
 
-The **forced damped pendulum** is described by the nonlinear second-order differential equation:
+**Formula:**
 
 $$
-\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t)
+v_1 = \sqrt{\frac{G M}{R}}
 $$
 
 Where:
 
-- **θ(t):** Angular displacement
-- **γ:** Damping coefficient
-- **ω₀ = √(g/L):** Natural angular frequency
-- **A:** Amplitude of the external driving force
-- **ω:** Frequency of the external driving force
-
-![Driven Damped Pendulum Diagram](https://www.researchgate.net/profile/Wojciech-Szuminski/publication/341399839/figure/fig2/AS:891142692823040@1590053793427/Driven-damped-pendulum.png)
-
-_Image: Schematic of a driven damped pendulum._
+- $G$ = Gravitational constant $6.674 \times 10^{-11} \, \text{m}^3/\text{kg·s}^2$
+- $M$ = Mass of the planet
+- $R$ = Radius of the planet
 
 ---
 
-### 🔍 Small-Angle Approximation
+#### 🚀 **2nd Cosmic Velocity** – Escape Velocity
 
-For small angles (θ < 0.2 rad):
+The minimum velocity required to escape the planet’s gravitational field entirely (neglecting atmospheric resistance).
 
-$$
-\sin(\theta) \approx \theta
-$$
-
-This simplifies the equation to a linear form:
+**Formula:**
 
 $$
-\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t)
+v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2GM}{R}}
 $$
 
 ---
 
-### ✅ Analytical Solution
+#### 🌌 **3rd Cosmic Velocity** – Solar System Escape Velocity
 
-The general solution of this second-order linear non-homogeneous ODE is:
+The minimum speed required to escape the gravitational influence of the Sun when starting from a planet.
 
-$$
-\theta(t) = \theta_{\text{hom}}(t) + \theta_{\text{part}}(t)
-$$
-
-#### 📘 Homogeneous (Transient) Solution:
+**Approximate Formula:**
 
 $$
-\theta_{\text{hom}}(t) = C_1 e^{-\gamma t/2} \cos(\omega_d t) + C_2 e^{-\gamma t/2} \sin(\omega_d t)
+v_3 \approx \sqrt{2} \cdot v_2 = \sqrt{\frac{4GM}{R}}
 $$
 
-Where:
-
-$$
-\omega_d = \sqrt{\omega_0^2 - \left(\frac{\gamma}{2}\right)^2}
-$$
-
-#### 📘 Particular (Steady-State) Solution:
-
-$$
-\theta_{\text{part}}(t) = B \cos(\omega t - \phi)
-$$
-
-With:
-
-$$
-B = \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + \gamma^2 \omega^2}}, \quad \tan(\phi) = \frac{\gamma \omega}{\omega_0^2 - \omega^2}
-$$
+⚠️ Note: In precise missions, 3rd cosmic velocity also accounts for the planet’s motion around the Sun and solar escape mechanics.
 
 ---
 
-### 🎯 Resonance Condition
+### 📊 Calculated Velocities (m/s)
 
-Resonance occurs when the amplitude is maximized, i.e., when the denominator of $B$ is minimized:
-
-$$
-\omega_{\text{res}} = \sqrt{\omega_0^2 - 2\gamma^2}
-$$
-
----
-
-## 📊 Dynamics Analysis Summary
-
-The system’s behavior depends on three key parameters:
-
-- **Damping (γ):**
-
-  - Low damping → Sustained oscillations and sharp resonance
-  - High damping → Suppressed motion and reduced resonance
-
-- **Driving Amplitude (A):**
-
-  - Small A → Regular periodic motion
-  - Large A → Complex or chaotic behavior
-
-- **Driving Frequency (ω):**
-
-  - Near ω₀ → Resonance and large amplitude
-  - Far from ω₀ → Periodic, quasiperiodic, or chaotic behavior
-
-As parameters vary, the system may transition from simple harmonic motion to chaos, often via **period doubling**. These behaviors are best visualized using **time series**, **phase portraits**, and **Poincaré sections**.
+| Celestial Body | 1st Cosmic $v_1$ | 2nd Cosmic $v_2$ | 3rd Cosmic $v_3$ |
+| -------------- | ---------------- | ---------------- | ---------------- |
+| Earth          | \~7,909          | \~11,186         | \~15,811         |
+| Mars           | \~3,553          | \~5,025          | \~7,106          |
+| Jupiter        | \~42,103         | \~59,528         | \~84,206         |
 
 ---
 
-## 🌍 Real-World Applications
+### 📈 Visualization
 
-1. **Energy Harvesting Devices:**
-   Pendulum models help design systems that harvest mechanical vibrations efficiently under periodic driving.
+Here's the chart of the first, second, and third cosmic velocities:
 
-2. **Suspension Bridges:**
-   Forced oscillations under wind or traffic loads must be analyzed to prevent resonance-induced failures.
-
-3. **RLC Circuits:**
-   Analogous behavior in electrical circuits makes this model useful for analyzing damping and resonance in electronics.
-
-4. **Biomechanics (Human Gait):**
-   Useful for understanding walking dynamics and designing prosthetics or studying movement disorders.
+![Cosmic Velocities Chart](sandbox:/mnt/data/cosmic_velocities_plot.png)
 
 ---
 
-## 🛠️ Simulation and Visualization
-
-### 🎯 Objective
-
-This section focuses on advanced simulation of the forced damped pendulum, including:
-
-- **Bifurcation Diagrams** to track how system behavior changes with varying parameters
-- **Poincaré Sections** to reveal the underlying structure of chaotic motion
-- **Phase Portraits** to visualize trajectories in phase space
-
----
-
-### 🔬 Tools
-
-#### 📈 Bifurcation Diagram:
-
-Visualizes how long-term system behavior evolves as a parameter (typically A) is varied. It reveals the **route to chaos** via period doubling.
-
-![Bifurcation Diagram](https://www.researchgate.net/profile/Dimitrios-Kantemnidis/publication/371401445/figure/fig7/AS:1234567890123456@1590053793427/The-Bifurcation-Diagram-of-a-Driven-Damped-Pendulum.png)
-
-_Image: Bifurcation diagram showing period doubling leading to chaos._
-
-#### 🔁 Poincaré Section:
-
-Samples the system state at regular intervals (e.g., each period of driving force). Helps identify **periodic**, **quasiperiodic**, or **chaotic** regimes.
-
-![Poincaré Section](https://mathematica.stackexchange.com/questions/98879/poincaresection-for-a-driven-damped-pendulum-is-not-generating-a-poincar%C3%A9-sectio)
-
-_Image: Poincaré section illustrating the transition to chaos._
-
-#### 🌌 Phase Portrait:
-
-Plots angular velocity $\dot{\theta}$ versus angular displacement $\theta$ to observe system evolution:
-
-- **Limit cycles** → regular oscillation
-- **Strange attractors** → chaotic motion
-
-![Phase Portrait](https://www.ippp.dur.ac.uk/~krauss/Lectures/NumericalMethods/Oscillator/Lecture/os4.html)
-
-_Image: Phase portrait depicting the system's trajectory in phase space._
-
----
-
-If you would like Python implementations (e.g., bifurcation diagrams, Poincaré maps, or phase portraits) to support this theory visually, feel free to ask!
-
----
+✅ **Next step:** Let me know if you'd like to proceed to **Subtask 2: Analyze the Parameters Affecting These Velocities** with formulas and code.
