@@ -48,6 +48,14 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-1-theoretical-derivation">1-1. Theoretical Derivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-2-theoretical-analysis-of-the-range">1-2. Theoretical Analysis of the Range</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-3-key-equations-of-projectile-motion">1-3. Key Equations of Projectile Motion</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-4-project-summary-simulation-analysis-of-projectile-motion">1-4. Project Summary: Simulation &amp; Analysis of Projectile Motion</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -171,589 +179,163 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
-<p>1-1</p>
-<ol>
-<li>Theoretical Derivation
-   The equations of motion for projectile motion can be derived using Newton’s second law. Assuming no air resistance, the motion is governed by the kinematic equations:</li>
-</ol>
-<p>Horizontal motion:</p>
-<p>𝑥
-(
-𝑡
-)
-=
-𝑣
-0
-cos
-⁡
-(
-𝜃
-)
-𝑡
-x(t)=v
-0
-​
-cos(θ)t
-(Constant velocity since no acceleration acts horizontally)</p>
-<p>Vertical motion:</p>
-<p>𝑦
-(
-𝑡
-)
-=
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-𝑡
-−
-1
-2
-𝑔
-𝑡
-2
-y(t)=v
-0
-​
-sin(θ)t−
-2
-1
-​
-gt
-2</p>
-<p>(Acceleration due to gravity acts downward)</p>
-<p>To determine range
-𝑅
-R, we find the time of flight by setting
-𝑦
-(
-𝑡
-)
-=
-0
-y(t)=0:</p>
-<p>𝑡
-𝑓
-=
-2
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-𝑔
-t
-f
-​
-=
-g
-2v
-0
-​
-sin(θ)
-​</p>
-<p>Substituting this into the horizontal displacement equation:</p>
-<h1 id="r">𝑅</h1>
-<p>𝑣
-0
-cos
-⁡
-(
-𝜃
-)
-⋅
-2
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-𝑔
-R=v
-0
-​
-cos(θ)⋅
-g
-2v
-0
-​
-sin(θ)
-​</p>
-<p>Using the trigonometric identity
-2
-sin
-⁡
-(
-𝜃
-)
-cos
-⁡
-(
-𝜃
-)
-=
-sin
-⁡
-(
-2
-𝜃
-)
-2sin(θ)cos(θ)=sin(2θ), we obtain:</p>
-<h1 id="r_1">𝑅</h1>
-<p>𝑣
-0
-2
-𝑔
-sin
-⁡
-(
-2
-𝜃
-)
-R=
-g
-v
-0
-2
-​</p>
-<p>​
-sin(2θ)
-<img alt="alt text" src="../image-1.png"/></p>
+<p>Certainly! Here's a <strong>paraphrased version</strong> of the entire task while <strong>preserving all technical content and meanings</strong>, and <strong>not altering the equations or conclusions</strong>:</p>
 <hr/>
-<p>1-2
-. Theoretical Analysis of the Range
-Governing Equations
-Projectile motion is described by the kinematic equations for motion in two dimensions. Assuming no air resistance:</p>
-<p>Horizontal displacement:</p>
-<p>𝑥
-(
-𝑡
-)
-=
-𝑣
-0
-cos
-⁡
-(
-𝜃
-)
-𝑡
-x(t)=v
-0
-​
-cos(θ)t
-Vertical displacement:</p>
-<p>𝑦
-(
-𝑡
-)
-=
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-𝑡
-−
-1
-2
-𝑔
-𝑡
-2
-y(t)=v
-0
-​
-sin(θ)t−
-2
-1
-​
-gt
-2</p>
-<p>where:</p>
-<p>𝑣
-0
-v
-0
-​
-is the initial velocity,</p>
-<p>𝜃
-θ is the launch angle,</p>
-<p>𝑔
-g is gravitational acceleration.</p>
-<p>Time of Flight
-Setting
-𝑦
-(
-𝑡
-)
-=
-0
-y(t)=0 to determine the time the projectile spends in the air:</p>
-<p>𝑡
-𝑓
-=
-2
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-𝑔
-t
-f
-​
-=
-g
-2v
-0
-​
-sin(θ)
-​</p>
-<p>Range Equation
-Substituting
-𝑡
-𝑓
-t
-f
-​
-into the horizontal displacement equation:</p>
-<h1 id="r_2">𝑅</h1>
-<p>𝑣
-0
-cos
-⁡
-(
-𝜃
-)
-⋅
-2
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-𝑔
-R=v
-0
-​
-cos(θ)⋅
-g
-2v
-0
-​
-sin(θ)
-​</p>
-<p>Using the trigonometric identity
-2
-sin
-⁡
-(
-𝜃
-)
-cos
-⁡
-(
-𝜃
-)
-=
-sin
-⁡
-(
-2
-𝜃
-)
-2sin(θ)cos(θ)=sin(2θ), we obtain:</p>
-<h1 id="r_3">𝑅</h1>
-<p>𝑣
-0
-2
-𝑔
-sin
-⁡
-(
-2
-𝜃
-)
-R=
-g
-v
-0
-2
-​</p>
-<p>​
-sin(2θ)</p>
+<h3 id="problem-1"><strong>Problem 1</strong></h3>
+<h4 id="1-1-theoretical-derivation"><strong>1-1. Theoretical Derivation</strong></h4>
+<p>The motion of a projectile can be described using Newton's second law. When air resistance is neglected, the kinematic equations govern the system:</p>
+<p><strong>Horizontal motion:</strong></p>
+<div class="arithmatex">\[
+x(t) = v_0 \cos(\theta) \cdot t
+\]</div>
+<p>(This is uniform motion as there is no horizontal acceleration.)</p>
+<p><strong>Vertical motion:</strong></p>
+<div class="arithmatex">\[
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+\]</div>
+<p>(Gravity acts downward, causing vertical acceleration.)</p>
+<p>To compute the <strong>range</strong> <span class="arithmatex">\(R\)</span>, determine the time when the projectile returns to the ground by setting <span class="arithmatex">\(y(t) = 0\)</span>:</p>
+<div class="arithmatex">\[
+t_f = \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<p>Substitute this into the horizontal position equation:</p>
+<div class="arithmatex">\[
+R = v_0 \cos(\theta) \cdot \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<p>Using the identity <span class="arithmatex">\(2 \sin(\theta) \cos(\theta) = \sin(2\theta)\)</span>, the range formula becomes:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2}{g} \sin(2\theta)
+\]</div>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<hr/>
+<h4 id="1-2-theoretical-analysis-of-the-range"><strong>1-2. Theoretical Analysis of the Range</strong></h4>
+<p><strong>Equations of Motion</strong></p>
+<p>Projectile motion without air resistance can be modeled as:</p>
+<p><strong>Horizontal displacement:</strong></p>
+<div class="arithmatex">\[
+x(t) = v_0 \cos(\theta) \cdot t
+\]</div>
+<p><strong>Vertical displacement:</strong></p>
+<div class="arithmatex">\[
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(v_0\)</span> is the initial speed,</li>
+<li><span class="arithmatex">\(\theta\)</span> is the launch angle,</li>
+<li><span class="arithmatex">\(g\)</span> is gravitational acceleration.</li>
+</ul>
+<p><strong>Time of Flight</strong></p>
+<p>To find how long the projectile stays airborne, solve <span class="arithmatex">\(y(t) = 0\)</span>:</p>
+<div class="arithmatex">\[
+t_f = \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<p><strong>Range Equation</strong></p>
+<p>Insert <span class="arithmatex">\(t_f\)</span> into the horizontal equation:</p>
+<div class="arithmatex">\[
+R = v_0 \cos(\theta) \cdot \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<p>Applying the identity again gives:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2}{g} \sin(2\theta)
+\]</div>
 <p><img alt="alt text" src="../image-2.png"/></p>
-<p>Analysis and Observations
-The maximum range occurs at 45°, as expected from the range equation.</p>
-<p>The range is symmetric about
-45
-∘
-45
-∘
-, meaning angles like 30° and 60° result in the same range.</p>
-<p>Increasing
-𝑣
-0
-v
-0
-​
-increases the range, while increasing
-𝑔
-g decreases it.</p>
-<h2 id="limitations-this-model-assumes-no-air-resistance-which-in-real-world-scenarios-would-shift-the-optimal-launch-angle-slightly-lower">Limitations: This model assumes no air resistance, which in real-world scenarios would shift the optimal launch angle slightly lower.</h2>
-<p>1-3
-Here are the basic mathematical equations for projectile motion:</p>
-<ol>
-<li>Motion Equations
-   When a projectile is launched with initial velocity
-   𝑣
-   0
-   v
-   0
-   ​
-   at an angle
-   𝜃
-   θ:</li>
-</ol>
-<p>Horizontal Motion:</p>
-<p>𝑥
-(
-𝑡
-)
-=
-𝑣
-0
-cos
-⁡
-(
-𝜃
-)
-⋅
-𝑡
-x(t)=v
-0
-​
-cos(θ)⋅t
-Vertical Motion:</p>
-<p>𝑦
-(
-𝑡
-)
-=
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-⋅
-𝑡
-−
-1
-2
-𝑔
-𝑡
-2
-y(t)=v
-0
-​
-sin(θ)⋅t−
-2
-1
-​
-gt
-2</p>
-<ol>
-<li>Flight Time
-   The total time of flight can be found by setting
-   𝑦
-   =
-   0
-   y=0 (when the projectile hits the ground):</li>
-</ol>
-<p>𝑡
-flight
-=
-2
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-𝑔
-t
-flight
-​
-=
-g
-2v
-0
-​
-sin(θ)
-​</p>
-<ol>
-<li>Maximum Height
-   The maximum height occurs when the vertical velocity is zero (
-   𝑣
-   𝑦
-   =
-   0
-   v
-   y
-   ​
-   =0):</li>
-</ol>
-<p>ℎ
-max
-=
-(
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-)
-2
-2
-𝑔
-h
-max
-​
-=
-2g
-(v
-0
-​
-sin(θ))
-2</p>
-<p>​</p>
-<ol>
-<li>Range (Maximum Horizontal Distance)
-   The horizontal range or distance traveled is given by:</li>
-</ol>
-<h1 id="r_4">𝑅</h1>
-<p>𝑣
-0
-2
-sin
-⁡
-(
-2
-𝜃
-)
-𝑔
-R=
-g
-v
-0
-2
-​
-sin(2θ)
-​</p>
-<h2 id="_1"><img alt="alt text" src="../image-3.png"/></h2>
-<p>1-4
-Project Summary: Simulation and Analysis of Projectile Motion
-Motivation:
-Projectile motion is an essential concept in physics that demonstrates the relationship between velocity, launch angle, and distance. While the problem of analyzing range as a function of the launch angle is simple, it highlights rich principles that apply to various real-world phenomena, from sports to rocket trajectories.</p>
-<p>Objective:
-The goal is to create a computational tool to simulate projectile motion and visualize the range of the projectile as a function of the launch angle, considering different initial conditions such as initial velocity, gravitational acceleration, and launch height.</p>
-<p>Implementation Plan:</p>
-<p>Mathematical Model:</p>
-<p>Horizontal motion:</p>
-<p>𝑥
-(
-𝑡
-)
-=
-𝑣
-0
-cos
-⁡
-(
-𝜃
-)
-⋅
-𝑡
-x(t)=v 
-0
-​
- cos(θ)⋅t
-Vertical motion:</p>
-<p>𝑦
-(
-𝑡
-)
-=
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-⋅
-𝑡
-−
-1
-2
-𝑔
-𝑡
-2
-y(t)=v 
-0
-​
- sin(θ)⋅t− 
-2
-1
-​
- gt 
-2</p>
-<p>Where 
-𝑣
-0
-v 
-0
-​
-  is the initial velocity, 
-𝜃
-θ is the angle of projection, and 
-𝑔
-g is gravitational acceleration.</p>
-<p>Computational Tool:</p>
-<p>Use Python, with NumPy for calculations and Matplotlib for visualizations, to simulate projectile motion under various initial conditions.</p>
-<p>Simulation:</p>
-<p>Compute the range of the projectile for each launch angle and plot the range against the angle.</p>
-<p>Vary parameters like initial velocity, gravity, and height to see their effects on the range.</p>
-<p>Visualizations:</p>
-<p>Plot range vs. launch angle for different initial velocities.</p>
-<p>Show how maximum range changes with varying launch angles for different speeds.</p>
-<p>Analysis:</p>
-<p>Explore how different parameters (velocity, angle, gravity, and height) influence the trajectory and range.</p>
-<p>Identify the optimal launch angle for maximum range.</p>
-<p>Limitations:</p>
-<p>The idealized model assumes no air resistance, constant gravity, and a flat launch surface.</p>
-<p>Discuss the impact of air resistance, wind, and varying launch heights, and propose ways to include these in more realistic models.
-<img alt="alt text" src="../image-4.png"/>
+<p><strong>Analysis &amp; Observations</strong></p>
+<ul>
+<li>The maximum range is achieved at a 45° launch angle.</li>
+<li>The range is symmetric around 45°, meaning 30° and 60° yield the same result.</li>
+<li>Increasing <span class="arithmatex">\(v_0\)</span> leads to a larger range.</li>
+<li>Higher <span class="arithmatex">\(g\)</span> values reduce the range.</li>
+</ul>
+<p><strong>Limitation:</strong> Air resistance is not accounted for, which would reduce the ideal launch angle slightly below 45° in real situations.</p>
+<hr/>
+<h4 id="1-3-key-equations-of-projectile-motion"><strong>1-3. Key Equations of Projectile Motion</strong></h4>
+<p><strong>1. Equations of Motion</strong></p>
+<p>When a projectile is launched with an initial velocity <span class="arithmatex">\(v_0\)</span> at angle <span class="arithmatex">\(\theta\)</span>:</p>
+<p><strong>Horizontal:</strong></p>
+<div class="arithmatex">\[
+x(t) = v_0 \cos(\theta) \cdot t
+\]</div>
+<p><strong>Vertical:</strong></p>
+<div class="arithmatex">\[
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+\]</div>
+<p><strong>2. Flight Time</strong></p>
+<p>Find when the projectile hits the ground by setting <span class="arithmatex">\(y = 0\)</span>:</p>
+<div class="arithmatex">\[
+t_\text{flight} = \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<p><strong>3. Maximum Height</strong></p>
+<p>Occurs when vertical velocity becomes zero:</p>
+<div class="arithmatex">\[
+h_\text{max} = \frac{(v_0 \sin(\theta))^2}{2g}
+\]</div>
+<p><strong>4. Range</strong></p>
+<p>Horizontal distance covered:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<hr/>
+<h4 id="1-4-project-summary-simulation-analysis-of-projectile-motion"><strong>1-4. Project Summary: Simulation &amp; Analysis of Projectile Motion</strong></h4>
+<p><strong>Motivation:</strong></p>
+<p>Projectile motion is a foundational topic in physics, illustrating the effects of angle and velocity on a body’s trajectory. While simple, it reveals principles relevant to many fields, such as ballistics or sports.</p>
+<p><strong>Objective:</strong></p>
+<p>Create a computational model that simulates projectile motion and visualizes how the range varies with launch angle, taking into account variables like velocity, gravity, and height.</p>
+<p><strong>Implementation Strategy:</strong></p>
+<p><strong>Mathematical Framework:</strong></p>
+<ul>
+<li><strong>Horizontal motion:</strong></li>
+</ul>
+<p>$$
+  x(t) = v_0 \cos(\theta) \cdot t
+  $$</p>
+<ul>
+<li><strong>Vertical motion:</strong></li>
+</ul>
+<p>$$
+  y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+  $$</p>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(v_0\)</span> = initial speed</li>
+<li><span class="arithmatex">\(\theta\)</span> = launch angle</li>
+<li><span class="arithmatex">\(g\)</span> = gravitational acceleration</li>
+</ul>
+<p><strong>Computational Model:</strong></p>
+<p>Use <strong>Python</strong>, leveraging <strong>NumPy</strong> for numerical calculations and <strong>Matplotlib</strong> for plotting.</p>
+<p><strong>Simulation Tasks:</strong></p>
+<ul>
+<li>Calculate the range for varying launch angles.</li>
+<li>Plot range vs. angle graphs under different initial speeds and conditions.</li>
+<li>Adjust gravity and initial height to observe their effects.</li>
+</ul>
+<p><strong>Visual Outputs:</strong></p>
+<ul>
+<li>Range vs. angle plots for multiple velocities.</li>
+<li>Visualization of optimal launch angles depending on speed.</li>
+</ul>
+<p><strong>Evaluation:</strong></p>
+<ul>
+<li>Analyze how different parameters affect motion and range.</li>
+<li>Determine the angle that maximizes range in various scenarios.</li>
+</ul>
+<p><strong>Model Assumptions:</strong></p>
+<p>This simulation assumes:</p>
+<ul>
+<li>No air resistance</li>
+<li>Constant gravitational field</li>
+<li>Flat ground level</li>
+</ul>
+<p><strong>Future Considerations:</strong></p>
+<ul>
+<li>Examine how resistance, wind, and launch height alter trajectories.</li>
+<li>Suggest improvements for modeling more realistic conditions.</li>
+</ul>
+<p><img alt="alt text" src="../image-4.png"/>
 <img alt="alt text" src="../image-5.png"/></p>
+<hr/>
+<p>Let me know if you need this translated into another language or turned into a report/document format.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
