@@ -58,6 +58,20 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#governing-differential-equation">🧠 Governing Differential Equation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#small-angle-approximation">🔍 Small-Angle Approximation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analytical-solution">✅ Analytical Solution</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#homogeneous-transient-solution">📘 Homogeneous (Transient) Solution:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#particular-steady-state-solution">📘 Particular (Steady-State) Solution:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#resonance-condition">🎯 Resonance Condition</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
@@ -171,196 +185,134 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
-<p>Task 1: Cosmic Velocities (Summary &amp; Code)
-2-1
-First Cosmic Velocity (Orbital Velocity): The velocity required for an object to stay in a stable orbit around a celestial body.</p>
-<p>𝑣
-1
-=
-𝐺
-𝑀
-𝑟
-v
-1
-​
-=
-r
-GM
-​</p>
-<p>​</p>
-<p>Second Cosmic Velocity (Escape Velocity): The velocity required to escape the gravitational pull of a celestial body.</p>
-<p>𝑣
-2
-=
-2
-𝐺
-𝑀
-𝑟
-v
-2
-​
-=
-r
-2GM
-​</p>
-<p>​</p>
-<p>Third Cosmic Velocity (Escape from Solar System): The velocity required to escape the gravitational influence of the solar system.</p>
-<p>𝑣
-3
-=
-3
-𝐺
-𝑀
-sun
-𝑟
-v
-3
-​
-=
-r
-3GM
-sun
-​</p>
-<p>​</p>
-<p>​</p>
-<p><img alt="alt text" src="../image-5.png"/></p>
-<p>2-2
-task 2 ve dusturu ve kodu ver
-ChatGPT:
-Task 2: Escape Velocities and Cosmic Velocities
-2.1 Definitions and Physical Meaning:
-The escape velocity is the minimum velocity an object needs to escape the gravitational influence of a celestial body, without further propulsion. The three cosmic velocities are:</p>
-<p>First Cosmic Velocity (Orbital Velocity): The velocity needed to stay in a stable orbit around a celestial body.</p>
-<p>Second Cosmic Velocity (Escape Velocity): The velocity needed to escape the gravitational influence of a celestial body (e.g., Earth, Mars, Jupiter).</p>
-<p>Third Cosmic Velocity (Escape from Solar System): The velocity needed to escape the gravitational pull of the entire solar system.</p>
-<p>2.2 Mathematical Derivations:
-First Cosmic Velocity:</p>
-<p>𝑣
-1
-=
-𝐺
-𝑀
-𝑟
-v
-1
-​
-=
-r
-GM
-​</p>
-<p>​</p>
+<p>Certainly! Here's the professionally rewritten and organized version of your <strong>Forced Damped Pendulum</strong> project in English:</p>
+<hr/>
+<h2 id="2-1-1-theoretical-foundation">🎓 2-1-1 Theoretical Foundation</h2>
+<h3 id="governing-differential-equation">🧠 Governing Differential Equation</h3>
+<p>The <strong>forced damped pendulum</strong> is described by the following nonlinear second-order differential equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t)
+\]</div>
 <p>Where:</p>
-<p>𝐺
-G = Gravitational constant</p>
-<p>𝑀
-M = Mass of the celestial body</p>
-<p>𝑟
-r = Distance from the center of the celestial body (orbital radius)</p>
-<p>Second Cosmic Velocity:</p>
-<p>𝑣
-2
-=
-2
-𝐺
-𝑀
-𝑟
-v
-2
-​
-=
-r
-2GM
-​</p>
-<p>​</p>
-<p>Third Cosmic Velocity:</p>
-<p>𝑣
-3
-=
-3
-𝐺
-𝑀
-sun
-𝑟
-v
-3
-​
-=
-r
-3GM
-sun
-​</p>
-<p>​</p>
-<p>​
-<img alt="alt text" src="../image-6.png"/>
-2-3
-3.1 Definitions and Physical Meaning:
-This task builds on the previously defined concepts of escape velocity and cosmic velocities. The cosmic velocities are critical for understanding how to leave the gravitational influence of various celestial bodies:</p>
-<p>First Cosmic Velocity: Orbital velocity needed to stay in a stable orbit around a celestial body.</p>
-<p>Second Cosmic Velocity: Escape velocity needed to break free from the gravitational pull of a celestial body.</p>
-<p>Third Cosmic Velocity: Escape velocity needed to leave the gravitational influence of the solar system.</p>
-<p>These velocities depend on two primary parameters:</p>
-<p>Mass of the celestial body (more massive bodies require higher velocities to escape).</p>
-<p>Radius of the celestial body (closer distances to the center of the body require higher velocities).</p>
-<p>3.2 Parameters and Formulae:
-Orbital Velocity (v₁):</p>
-<p>𝑣
-1
-=
-𝐺
-𝑀
-𝑟
-v
-1
-​
-=
-r
-GM
-​</p>
-<p>​</p>
+<ul>
+<li><strong>θ(t):</strong> Angular displacement</li>
+<li><strong>γ:</strong> Damping coefficient</li>
+<li><strong>ω₀ = √(g/L):</strong> Natural angular frequency</li>
+<li><strong>A:</strong> Amplitude of the external driving force</li>
+<li><strong>ω:</strong> Frequency of the external driving force</li>
+</ul>
+<hr/>
+<h3 id="small-angle-approximation">🔍 Small-Angle Approximation</h3>
+<p>For small angles (θ &lt; 0.2 rad):</p>
+<div class="arithmatex">\[
+\sin(\theta) \approx \theta
+\]</div>
+<p>This simplifies the equation to a linear form:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t)
+\]</div>
+<hr/>
+<h3 id="analytical-solution">✅ Analytical Solution</h3>
+<p>The general solution of this second-order linear non-homogeneous ODE is:</p>
+<div class="arithmatex">\[
+\theta(t) = \theta_{\text{hom}}(t) + \theta_{\text{part}}(t)
+\]</div>
+<h4 id="homogeneous-transient-solution">📘 Homogeneous (Transient) Solution:</h4>
+<div class="arithmatex">\[
+\theta_{\text{hom}}(t) = C_1 e^{-\gamma t/2} \cos(\omega_d t) + C_2 e^{-\gamma t/2} \sin(\omega_d t)
+\]</div>
 <p>Where:</p>
-<p>𝐺
-G = Gravitational constant</p>
-<p>𝑀
-M = Mass of the celestial body</p>
-<p>𝑟
-r = Orbital radius</p>
-<p>Escape Velocity (v₂):</p>
-<p>𝑣
-2
-=
-2
-𝐺
-𝑀
-𝑟
-v
-2
-​
-=
-r
-2GM
-​</p>
-<p>​</p>
-<p>Solar System Escape Velocity (v₃):</p>
-<p>𝑣
-3
-=
-3
-𝐺
-𝑀
-sun
-𝑟
-v
-3
-​
-=
-r
-3GM
-sun
-​</p>
-<p>​</p>
-<p>​
-<img alt="alt text" src="../image-7.png"/></p>
+<div class="arithmatex">\[
+\omega_d = \sqrt{\omega_0^2 - \left(\frac{\gamma}{2}\right)^2}
+\]</div>
+<h4 id="particular-steady-state-solution">📘 Particular (Steady-State) Solution:</h4>
+<div class="arithmatex">\[
+\theta_{\text{part}}(t) = B \cos(\omega t - \phi)
+\]</div>
+<p>With:</p>
+<div class="arithmatex">\[
+B = \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + \gamma^2 \omega^2}}, \quad \tan(\phi) = \frac{\gamma \omega}{\omega_0^2 - \omega^2}
+\]</div>
+<hr/>
+<h3 id="resonance-condition">🎯 Resonance Condition</h3>
+<p>Resonance occurs when the amplitude is maximized, i.e., when the denominator of <span class="arithmatex">\(B\)</span> is minimized:</p>
+<div class="arithmatex">\[
+\omega_{\text{res}} = \sqrt{\omega_0^2 - 2\gamma^2}
+\]</div>
+<hr/>
+<h2 id="2-1-2-dynamics-analysis-summary">📊 2-1-2 Dynamics Analysis Summary</h2>
+<p>The system’s behavior depends on three key parameters:</p>
+<ul>
+<li>
+<p><strong>Damping (γ):</strong></p>
+</li>
+<li>
+<p>Low damping → Sustained oscillations and sharp resonance</p>
+</li>
+<li>
+<p>High damping → Suppressed motion and reduced resonance</p>
+</li>
+<li>
+<p><strong>Driving Amplitude (A):</strong></p>
+</li>
+<li>
+<p>Small A → Regular periodic motion</p>
+</li>
+<li>
+<p>Large A → Complex or chaotic behavior</p>
+</li>
+<li>
+<p><strong>Driving Frequency (ω):</strong></p>
+</li>
+<li>
+<p>Near ω₀ → Resonance and large amplitude</p>
+</li>
+<li>Far from ω₀ → Periodic, quasiperiodic, or chaotic behavior</li>
+</ul>
+<p>As parameters vary, the system may transition from simple harmonic motion to chaos, often via <strong>period doubling</strong>. These behaviors are best visualized using <strong>time series</strong>, <strong>phase portraits</strong>, and <strong>Poincaré sections</strong>.</p>
+<hr/>
+<h2 id="2-1-3-real-world-applications">🌍 2-1-3 Real-World Applications</h2>
+<ol>
+<li>
+<p><strong>Energy Harvesting Devices:</strong>
+   Pendulum models help design systems that harvest mechanical vibrations efficiently under periodic driving.</p>
+</li>
+<li>
+<p><strong>Suspension Bridges:</strong>
+   Forced oscillations under wind or traffic loads must be analyzed to prevent resonance-induced failures.</p>
+</li>
+<li>
+<p><strong>RLC Circuits:</strong>
+   Analogous behavior in electrical circuits makes this model useful for analyzing damping and resonance in electronics.</p>
+</li>
+<li>
+<p><strong>Biomechanics (Human Gait):</strong>
+   Useful for understanding walking dynamics and designing prosthetics or studying movement disorders.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="2-1-4-simulation-and-visualization">🛠️ 2-1-4 Simulation and Visualization</h2>
+<h3 id="objective">🎯 Objective</h3>
+<p>This section focuses on advanced simulation of the forced damped pendulum, including:</p>
+<ul>
+<li><strong>Bifurcation Diagrams</strong> to track how system behavior changes with varying parameters</li>
+<li><strong>Poincaré Sections</strong> to reveal the underlying structure of chaotic motion</li>
+<li><strong>Phase Portraits</strong> to visualize trajectories in phase space</li>
+</ul>
+<hr/>
+<h3 id="tools">🔬 Tools</h3>
+<h4 id="bifurcation-diagram">📈 Bifurcation Diagram:</h4>
+<p>Visualizes how long-term system behavior evolves as a parameter (typically A) is varied. It reveals the <strong>route to chaos</strong> via period doubling.</p>
+<h4 id="poincare-section">🔁 Poincaré Section:</h4>
+<p>Samples the system state at regular intervals (e.g., each period of driving force). Helps identify <strong>periodic</strong>, <strong>quasiperiodic</strong>, or <strong>chaotic</strong> regimes.</p>
+<h4 id="phase-portrait">🌌 Phase Portrait:</h4>
+<p>Plots angular velocity <span class="arithmatex">\(\dot{\theta}\)</span> versus angular displacement θ to observe system evolution:</p>
+<ul>
+<li><strong>Limit cycles</strong> → regular oscillation</li>
+<li><strong>Strange attractors</strong> → chaotic motion</li>
+</ul>
+<hr/>
+<p>Let me know if you'd like Python implementations (e.g., bifurcation diagrams, Poincaré maps, or phase portraits) to support this theory visually.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
