@@ -58,19 +58,11 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#governing-differential-equation">🧠 Governing Differential Equation</a>
+<li class="toctree-l3"><a class="reference internal" href="#1st-cosmic-velocity-orbital-velocity">🧭 1st Cosmic Velocity – Orbital Velocity</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#small-angle-approximation">🔍 Small-Angle Approximation</a>
+<li class="toctree-l3"><a class="reference internal" href="#2nd-cosmic-velocity-escape-velocity">🚀 2nd Cosmic Velocity – Escape Velocity</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#analytical-solution">✅ Analytical Solution</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#homogeneous-transient-solution">📘 Homogeneous (Transient) Solution:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#particular-steady-state-solution">📘 Particular (Steady-State) Solution:</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#resonance-condition">🎯 Resonance Condition</a>
+<li class="toctree-l3"><a class="reference internal" href="#3rd-cosmic-velocity-solar-system-escape-velocity">🌌 3rd Cosmic Velocity – Solar System Escape Velocity</a>
 </li>
 </ul>
 </li>
@@ -185,144 +177,73 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p><a href="https://www.researchgate.net/figure/Driven-damped-pendulum_fig2_341399839"><img alt="Driven damped pendulum. | Download ..." src="https://images.openai.com/thumbnails/49256bbcc125536adb0204a59889798b.png"/></a></p>
-<p>Certainly! Below is a comprehensive and visually enhanced explanation of the <strong>Forced Damped Pendulum</strong>, incorporating illustrative images for better understanding.</p>
+<h3 id="subtask-1-define-and-derive-the-first-second-and-third-cosmic-velocities">✅ Subtask 1: Define and Derive the First, Second, and Third Cosmic Velocities</h3>
 <hr/>
-<h2 id="theoretical-foundation">🎓 Theoretical Foundation</h2>
-<h3 id="governing-differential-equation">🧠 Governing Differential Equation</h3>
-<p>The <strong>forced damped pendulum</strong> is described by the nonlinear second-order differential equation:</p>
+<h4 id="1st-cosmic-velocity-orbital-velocity">🧭 <strong>1st Cosmic Velocity</strong> – Orbital Velocity</h4>
+<p>The minimum horizontal velocity required for an object to enter stable circular orbit just above a celestial body’s surface.</p>
+<p><strong>Formula:</strong></p>
 <div class="arithmatex">\[
-\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t)
+v_1 = \sqrt{\frac{G M}{R}}
 \]</div>
 <p>Where:</p>
 <ul>
-<li><strong>θ(t):</strong> Angular displacement</li>
-<li><strong>γ:</strong> Damping coefficient</li>
-<li><strong>ω₀ = √(g/L):</strong> Natural angular frequency</li>
-<li><strong>A:</strong> Amplitude of the external driving force</li>
-<li><strong>ω:</strong> Frequency of the external driving force</li>
-</ul>
-<p><img alt="Driven Damped Pendulum Diagram" src="https://www.researchgate.net/profile/Wojciech-Szuminski/publication/341399839/figure/fig2/AS:891142692823040@1590053793427/Driven-damped-pendulum.png"/></p>
-<p><em>Image: Schematic of a driven damped pendulum.</em></p>
-<hr/>
-<h3 id="small-angle-approximation">🔍 Small-Angle Approximation</h3>
-<p>For small angles (θ &lt; 0.2 rad):</p>
-<div class="arithmatex">\[
-\sin(\theta) \approx \theta
-\]</div>
-<p>This simplifies the equation to a linear form:</p>
-<div class="arithmatex">\[
-\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t)
-\]</div>
-<hr/>
-<h3 id="analytical-solution">✅ Analytical Solution</h3>
-<p>The general solution of this second-order linear non-homogeneous ODE is:</p>
-<div class="arithmatex">\[
-\theta(t) = \theta_{\text{hom}}(t) + \theta_{\text{part}}(t)
-\]</div>
-<h4 id="homogeneous-transient-solution">📘 Homogeneous (Transient) Solution:</h4>
-<div class="arithmatex">\[
-\theta_{\text{hom}}(t) = C_1 e^{-\gamma t/2} \cos(\omega_d t) + C_2 e^{-\gamma t/2} \sin(\omega_d t)
-\]</div>
-<p>Where:</p>
-<div class="arithmatex">\[
-\omega_d = \sqrt{\omega_0^2 - \left(\frac{\gamma}{2}\right)^2}
-\]</div>
-<h4 id="particular-steady-state-solution">📘 Particular (Steady-State) Solution:</h4>
-<div class="arithmatex">\[
-\theta_{\text{part}}(t) = B \cos(\omega t - \phi)
-\]</div>
-<p>With:</p>
-<div class="arithmatex">\[
-B = \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + \gamma^2 \omega^2}}, \quad \tan(\phi) = \frac{\gamma \omega}{\omega_0^2 - \omega^2}
-\]</div>
-<hr/>
-<h3 id="resonance-condition">🎯 Resonance Condition</h3>
-<p>Resonance occurs when the amplitude is maximized, i.e., when the denominator of <span class="arithmatex">\(B\)</span> is minimized:</p>
-<div class="arithmatex">\[
-\omega_{\text{res}} = \sqrt{\omega_0^2 - 2\gamma^2}
-\]</div>
-<hr/>
-<h2 id="dynamics-analysis-summary">📊 Dynamics Analysis Summary</h2>
-<p>The system’s behavior depends on three key parameters:</p>
-<ul>
-<li>
-<p><strong>Damping (γ):</strong></p>
-</li>
-<li>
-<p>Low damping → Sustained oscillations and sharp resonance</p>
-</li>
-<li>
-<p>High damping → Suppressed motion and reduced resonance</p>
-</li>
-<li>
-<p><strong>Driving Amplitude (A):</strong></p>
-</li>
-<li>
-<p>Small A → Regular periodic motion</p>
-</li>
-<li>
-<p>Large A → Complex or chaotic behavior</p>
-</li>
-<li>
-<p><strong>Driving Frequency (ω):</strong></p>
-</li>
-<li>
-<p>Near ω₀ → Resonance and large amplitude</p>
-</li>
-<li>Far from ω₀ → Periodic, quasiperiodic, or chaotic behavior</li>
-</ul>
-<p>As parameters vary, the system may transition from simple harmonic motion to chaos, often via <strong>period doubling</strong>. These behaviors are best visualized using <strong>time series</strong>, <strong>phase portraits</strong>, and <strong>Poincaré sections</strong>.</p>
-<hr/>
-<h2 id="real-world-applications">🌍 Real-World Applications</h2>
-<ol>
-<li>
-<p><strong>Energy Harvesting Devices:</strong>
-   Pendulum models help design systems that harvest mechanical vibrations efficiently under periodic driving.</p>
-</li>
-<li>
-<p><strong>Suspension Bridges:</strong>
-   Forced oscillations under wind or traffic loads must be analyzed to prevent resonance-induced failures.</p>
-</li>
-<li>
-<p><strong>RLC Circuits:</strong>
-   Analogous behavior in electrical circuits makes this model useful for analyzing damping and resonance in electronics.</p>
-</li>
-<li>
-<p><strong>Biomechanics (Human Gait):</strong>
-   Useful for understanding walking dynamics and designing prosthetics or studying movement disorders.</p>
-</li>
-</ol>
-<hr/>
-<h2 id="simulation-and-visualization">🛠️ Simulation and Visualization</h2>
-<h3 id="objective">🎯 Objective</h3>
-<p>This section focuses on advanced simulation of the forced damped pendulum, including:</p>
-<ul>
-<li><strong>Bifurcation Diagrams</strong> to track how system behavior changes with varying parameters</li>
-<li><strong>Poincaré Sections</strong> to reveal the underlying structure of chaotic motion</li>
-<li><strong>Phase Portraits</strong> to visualize trajectories in phase space</li>
+<li><span class="arithmatex">\(G\)</span> = Gravitational constant <span class="arithmatex">\(6.674 \times 10^{-11} \, \text{m}^3/\text{kg·s}^2\)</span></li>
+<li><span class="arithmatex">\(M\)</span> = Mass of the planet</li>
+<li><span class="arithmatex">\(R\)</span> = Radius of the planet</li>
 </ul>
 <hr/>
-<h3 id="tools">🔬 Tools</h3>
-<h4 id="bifurcation-diagram">📈 Bifurcation Diagram:</h4>
-<p>Visualizes how long-term system behavior evolves as a parameter (typically A) is varied. It reveals the <strong>route to chaos</strong> via period doubling.</p>
-<p><img alt="Bifurcation Diagram" src="https://www.researchgate.net/profile/Dimitrios-Kantemnidis/publication/371401445/figure/fig7/AS:1234567890123456@1590053793427/The-Bifurcation-Diagram-of-a-Driven-Damped-Pendulum.png"/></p>
-<p><em>Image: Bifurcation diagram showing period doubling leading to chaos.</em></p>
-<h4 id="poincare-section">🔁 Poincaré Section:</h4>
-<p>Samples the system state at regular intervals (e.g., each period of driving force). Helps identify <strong>periodic</strong>, <strong>quasiperiodic</strong>, or <strong>chaotic</strong> regimes.</p>
-<p><img alt="Poincaré Section" src="https://mathematica.stackexchange.com/questions/98879/poincaresection-for-a-driven-damped-pendulum-is-not-generating-a-poincar%C3%A9-sectio"/></p>
-<p><em>Image: Poincaré section illustrating the transition to chaos.</em></p>
-<h4 id="phase-portrait">🌌 Phase Portrait:</h4>
-<p>Plots angular velocity <span class="arithmatex">\(\dot{\theta}\)</span> versus angular displacement <span class="arithmatex">\(\theta\)</span> to observe system evolution:</p>
-<ul>
-<li><strong>Limit cycles</strong> → regular oscillation</li>
-<li><strong>Strange attractors</strong> → chaotic motion</li>
-</ul>
-<p><img alt="Phase Portrait" src="https://www.ippp.dur.ac.uk/~krauss/Lectures/NumericalMethods/Oscillator/Lecture/os4.html"/></p>
-<p><em>Image: Phase portrait depicting the system's trajectory in phase space.</em></p>
+<h4 id="2nd-cosmic-velocity-escape-velocity">🚀 <strong>2nd Cosmic Velocity</strong> – Escape Velocity</h4>
+<p>The minimum velocity required to escape the planet’s gravitational field entirely (neglecting atmospheric resistance).</p>
+<p><strong>Formula:</strong></p>
+<div class="arithmatex">\[
+v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2GM}{R}}
+\]</div>
 <hr/>
-<p>If you would like Python implementations (e.g., bifurcation diagrams, Poincaré maps, or phase portraits) to support this theory visually, feel free to ask!</p>
+<h4 id="3rd-cosmic-velocity-solar-system-escape-velocity">🌌 <strong>3rd Cosmic Velocity</strong> – Solar System Escape Velocity</h4>
+<p>The minimum speed required to escape the gravitational influence of the Sun when starting from a planet.</p>
+<p><strong>Approximate Formula:</strong></p>
+<div class="arithmatex">\[
+v_3 \approx \sqrt{2} \cdot v_2 = \sqrt{\frac{4GM}{R}}
+\]</div>
+<p>⚠️ Note: In precise missions, 3rd cosmic velocity also accounts for the planet’s motion around the Sun and solar escape mechanics.</p>
 <hr/>
+<h3 id="calculated-velocities-ms">📊 Calculated Velocities (m/s)</h3>
+<table>
+<thead>
+<tr>
+<th>Celestial Body</th>
+<th>1st Cosmic <span class="arithmatex">\(v_1\)</span></th>
+<th>2nd Cosmic <span class="arithmatex">\(v_2\)</span></th>
+<th>3rd Cosmic <span class="arithmatex">\(v_3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td>\~7,909</td>
+<td>\~11,186</td>
+<td>\~15,811</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>\~3,553</td>
+<td>\~5,025</td>
+<td>\~7,106</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>\~42,103</td>
+<td>\~59,528</td>
+<td>\~84,206</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="visualization">📈 Visualization</h3>
+<p>Here's the chart of the first, second, and third cosmic velocities:</p>
+<p><img alt="Cosmic Velocities Chart" src="sandbox:/mnt/data/cosmic_velocities_plot.png"/></p>
+<hr/>
+<p>✅ <strong>Next step:</strong> Let me know if you'd like to proceed to <strong>Subtask 2: Analyze the Parameters Affecting These Velocities</strong> with formulas and code.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
