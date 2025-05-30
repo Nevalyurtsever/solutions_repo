@@ -152,4 +152,3 @@ Plots angular velocity $\dot{\theta}$ versus angular displacement θ to observe 
 
 ---
 
-Let me know if you'd like Python implementations (e.g., bifurcation diagrams, Poincaré maps, or phase portraits) to support this theory visually.
