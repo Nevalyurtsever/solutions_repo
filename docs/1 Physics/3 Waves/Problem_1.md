@@ -1,4 +1,5 @@
 # Problem 1
+
 # 🌊 Problem 4: Interference Patterns on a Water Surface
 
 ---
@@ -15,7 +16,7 @@ We consider a regular polygon—e.g., an **equilateral triangle**—with point s
 
 ### 🧮 Single Wave Expression
 
-A circular wave from a point source at position \$(x\_s, y\_s)\$ is described as:
+A circular wave from a point source at position \$(x_s, y_s)\$ is described as:
 
 $$
 \eta(x, y, t) = A \cos(k r - \omega t + \phi)
@@ -23,22 +24,22 @@ $$
 
 Where:
 
-* \$\eta(x, y, t)\$ is the surface displacement
-* \$A\$ is amplitude
-* \$k = \frac{2\pi}{\lambda}\$ is the wave number
-* \$\omega = 2\pi f\$ is the angular frequency
-* \$r = \sqrt{(x - x\_s)^2 + (y - y\_s)^2}\$ is the distance to the source
-* \$\phi\$ is the phase (set to 0 for simplicity)
+- \$\eta(x, y, t)\$ is the surface displacement
+- \$A\$ is amplitude
+- \$k = \frac{2\pi}{\lambda}\$ is the wave number
+- \$\omega = 2\pi f\$ is the angular frequency
+- \$r = \sqrt{(x - x_s)^2 + (y - y_s)^2}\$ is the distance to the source
+- \$\phi\$ is the phase (set to 0 for simplicity)
 
 ### 🧮 Total Interference (Superposition Principle)
 
-For \$N\$ point sources at \$(x\_i, y\_i)\$:
+For \$N\$ point sources at \$(x_i, y_i)\$:
 
 $$
 \eta_{total}(x, y, t) = \sum_{i=1}^N A \cos(k r_i - \omega t)
 $$
 
-Where \$r\_i = \sqrt{(x - x\_i)^2 + (y - y\_i)^2}\$ is the distance from point \$(x, y)\$ to source \$i\$.
+Where \$r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}\$ is the distance from point \$(x, y)\$ to source \$i\$.
 
 ---
 
@@ -90,21 +91,21 @@ plt.show()
 
 ---
 
+![alt text](image.png)
+
 ## 🧭 Task 4: Interpretation and Applications
 
 ### 🔍 Interference Analysis
 
-* **Constructive Interference**: Peaks where wave crests meet
-* **Destructive Interference**: Nulls where crest meets trough
-* **Fringe Patterns**: Formed based on polygon geometry and wavelength
+- **Constructive Interference**: Peaks where wave crests meet
+- **Destructive Interference**: Nulls where crest meets trough
+- **Fringe Patterns**: Formed based on polygon geometry and wavelength
 
 ### 🌐 Applications
 
-* Sound systems (phase control)
-* Water wave tanks (research and education)
-* Optics (laser interference from multiple slits)
-* Antenna arrays
+- Sound systems (phase control)
+- Water wave tanks (research and education)
+- Optics (laser interference from multiple slits)
+- Antenna arrays
 
 ---
-
-
