@@ -172,6 +172,128 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-4-equivalent-resistance-using-graph-theory">🌐 Problem 4: Equivalent Resistance Using Graph Theory</h1>
+<hr/>
+<h2 id="task-1-algorithm-description-for-equivalent-resistance-calculation">🎯 Task 1: Algorithm Description for Equivalent Resistance Calculation</h2>
+<h3 id="physical-and-mathematical-meaning">🔌 Physical and Mathematical Meaning</h3>
+<p>Electrical circuits can be represented as graphs:</p>
+<ul>
+<li><strong>Nodes</strong> represent junctions or connection points.</li>
+<li><strong>Edges</strong> represent resistors with weights as their resistance values.</li>
+</ul>
+<p>The goal is to reduce the entire graph to a single equivalent resistance between two specific terminals.</p>
+<h3 id="algorithm-description">⚙️ Algorithm Description</h3>
+<ol>
+<li><strong>Input</strong>: Graph <span class="arithmatex">\(G(V, E)\)</span> with edge weights as resistances.</li>
+<li>
+<p><strong>Loop</strong>:</p>
+</li>
+<li>
+<p>Detect <strong>series connections</strong>: A node connected to exactly two resistors and no external terminal → combine in series: <span class="arithmatex">\(R_{eq} = R_1 + R_2\)</span></p>
+</li>
+<li>Detect <strong>parallel connections</strong>: Two nodes connected by multiple resistors → combine in parallel: <span class="arithmatex">\(\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + ...\)</span></li>
+<li>
+<p>Reduce and update the graph.</p>
+</li>
+<li>
+<p>Repeat until graph reduces to one equivalent resistor between start and end nodes.</p>
+</li>
+</ol>
+<h3 id="pseudocode">🔄 Pseudocode</h3>
+<pre><code class="language-plaintext">function equivalent_resistance(graph, start, end):
+    while graph has more than one edge between start and end:
+        for node in graph:
+            if node has degree 2 and not start or end:
+                combine series resistors
+                update graph
+        for pairs of nodes:
+            if multiple edges exist:
+                combine in parallel
+                update graph
+    return weight of the single edge from start to end
+</code></pre>
+<hr/>
+<h2 id="task-2-full-python-implementation-advanced">🧮 Task 2: Full Python Implementation (Advanced)</h2>
+<h3 id="libraries-used">📦 Libraries Used</h3>
+<pre><code class="language-python">import networkx as nx
+</code></pre>
+<h3 id="python-code-graph-simplification-algorithm">🐍 Python Code: Graph Simplification Algorithm</h3>
+<pre><code class="language-python">import networkx as nx
+
+def combine_series(graph):
+    changed = False
+    for node in list(graph.nodes):
+        if graph.degree[node] == 2 and node not in ('A', 'B'):
+            neighbors = list(graph.neighbors(node))
+            if len(neighbors) == 2:
+                r1 = graph[node][neighbors[0]]['resistance']
+                r2 = graph[node][neighbors[1]]['resistance']
+                req = r1 + r2
+                graph.add_edge(neighbors[0], neighbors[1], resistance=req)
+                graph.remove_node(node)
+                changed = True
+                break
+    return changed
+
+def combine_parallel(graph):
+    changed = False
+    for u, v in list(graph.edges()):
+        edges = list(graph.get_edge_data(u, v).values())
+        if len(edges) &gt; 1:
+            total_inv = sum(1.0 / e['resistance'] for e in edges)
+            req = 1.0 / total_inv
+            graph.remove_edges_from([(u, v)] * len(edges))
+            graph.add_edge(u, v, resistance=req)
+            changed = True
+            break
+    return changed
+
+def simplify(graph, start='A', end='B'):
+    while True:
+        if not combine_series(graph) and not combine_parallel(graph):
+            break
+    return graph[start][end]['resistance']
+
+# Example: Simple circuit
+G = nx.MultiGraph()
+G.add_edge('A', 'C', resistance=5)
+G.add_edge('C', 'B', resistance=10)
+G.add_edge('A', 'B', resistance=15)
+
+# Simplify to single resistance
+equivalent = simplify(G)
+print(f"Equivalent Resistance between A and B: {equivalent:.2f} Ω")
+</code></pre>
+<hr/>
+<h2 id="task-3-example-cases">📊 Task 3: Example Cases</h2>
+<h3 id="example-1-series-resistors">✅ Example 1: Series Resistors</h3>
+<ul>
+<li>A → C (5Ω), C → B (10Ω)</li>
+<li>Equivalent: 15Ω</li>
+</ul>
+<h3 id="example-2-parallel-resistors">✅ Example 2: Parallel Resistors</h3>
+<ul>
+<li>A → B (15Ω) and A → B (30Ω)</li>
+<li>Equivalent: <span class="arithmatex">\(R = \frac{1}{\frac{1}{15} + \frac{1}{30}} = 10Ω\)</span></li>
+</ul>
+<h3 id="example-3-series-parallel-mixed">✅ Example 3: Series + Parallel Mixed</h3>
+<ul>
+<li>Combine series, then reduce in parallel → final single resistance</li>
+</ul>
+<hr/>
+<h2 id="task-4-algorithm-efficiency-and-extensions">🧠 Task 4: Algorithm Efficiency and Extensions</h2>
+<h3 id="efficiency">⏱️ Efficiency</h3>
+<ul>
+<li>Depends on the number of nodes/edges</li>
+<li>Reductions via series/parallel detection are fast (linear in size of graph)</li>
+</ul>
+<h3 id="improvements">🚀 Improvements</h3>
+<ul>
+<li>Use depth-first search (DFS) to identify subgraphs</li>
+<li>Implement Kirchhoff's laws with matrix methods for arbitrary topologies</li>
+<li>Extend for voltage/current analysis using Ohm’s Law</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
