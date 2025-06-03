@@ -137,6 +137,8 @@ plt.show()
 
 ---
 
+![alt text](image-12.png)
+
 ### 💻 **Task 4: Implement Simulation & Extend to Elliptical Orbits**
 
 #### 🧪 Simulation of Circular Orbits
