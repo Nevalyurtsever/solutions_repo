@@ -197,4 +197,3 @@ plt.show()
 | 3. Real-World Examples                   | ✔️      |
 | 4. Computational Model + Elliptical Case | ✔️      |
 
-Let me know if you want this in `.ipynb` (Jupyter notebook), `.py`, or `.md` format for submission. Ready for the next problem if you are!
