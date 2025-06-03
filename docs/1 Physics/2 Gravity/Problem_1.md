@@ -1,4 +1,3 @@
-
 ## 📘 Problem 1: Orbital Period and Orbital Radius
 
 ---
@@ -63,16 +62,18 @@ plt.show()
 
 ---
 
+![alt text](image-11.png)
+
 ### 🛰️ **Task 2: Implications for Astronomy**
 
 #### 🌌 Explanation
 
 Kepler's Third Law is fundamental for understanding how celestial bodies move and interact. It allows astronomers to:
 
-* 🪐 **Determine masses** of planets and stars by observing satellite orbits.
-* 🌍 **Estimate distances** in solar and extrasolar systems.
-* 🛰️ **Design satellite orbits** (e.g. GPS, geostationary satellites).
-* 🔭 **Detect exoplanets** by measuring how a star wobbles due to an unseen companion.
+- 🪐 **Determine masses** of planets and stars by observing satellite orbits.
+- 🌍 **Estimate distances** in solar and extrasolar systems.
+- 🛰️ **Design satellite orbits** (e.g. GPS, geostationary satellites).
+- 🔭 **Detect exoplanets** by measuring how a star wobbles due to an unseen companion.
 
 ---
 
@@ -98,17 +99,17 @@ print(f"Estimated Earth mass: {M_earth_est:.2e} kg")
 
 1. **Moon orbiting Earth**
 
-   * $r = 3.84 \times 10^8 \, \text{m}, \; T = 27.3 \, \text{days}$
-   * From this, Earth's mass can be estimated accurately.
+   - $r = 3.84 \times 10^8 \, \text{m}, \; T = 27.3 \, \text{days}$
+   - From this, Earth's mass can be estimated accurately.
 
 2. **Earth orbiting Sun**
 
-   * $r = 1.496 \times 10^{11} \, \text{m}, \; T = 365.25 \, \text{days}$
-   * Useful for measuring astronomical units (AU).
+   - $r = 1.496 \times 10^{11} \, \text{m}, \; T = 365.25 \, \text{days}$
+   - Useful for measuring astronomical units (AU).
 
 3. **Mars vs Jupiter**
 
-   * Jupiter’s orbital period is ≈11.9 years, and its distance is much greater — validating $T^2 \propto r^3$.
+   - Jupiter’s orbital period is ≈11.9 years, and its distance is much greater — validating $T^2 \propto r^3$.
 
 ---
 
@@ -154,9 +155,9 @@ $$
 
 Where $a$ is the **semi-major axis**. This generalization allows the same method to work for:
 
-* Planets with **eccentric** orbits (e.g. Pluto)
-* Comets like Halley’s comet
-* Binary star systems
+- Planets with **eccentric** orbits (e.g. Pluto)
+- Comets like Halley’s comet
+- Binary star systems
 
 ---
 
@@ -196,4 +197,3 @@ plt.show()
 | 2. Implications in Astronomy             | ✔️      |
 | 3. Real-World Examples                   | ✔️      |
 | 4. Computational Model + Elliptical Case | ✔️      |
-
