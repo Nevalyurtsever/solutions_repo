@@ -1,4 +1,5 @@
 # Problem 2
+
 # 📈 Problem 5: Exploring the Central Limit Theorem through Simulations
 
 ---
@@ -70,8 +71,8 @@ plot_sampling_distribution(binomial_results, "Binomial")
 
 ## 🔬 Task 3: Parameter Exploration
 
-* As sample size increases, the distribution of sample means approaches a **normal distribution**, regardless of the original shape.
-* The spread (variance) of the sample mean distribution **decreases with larger sample sizes**, reflecting $\text{Var}(\bar{X}) = \frac{\sigma^2}{n}$.
+- As sample size increases, the distribution of sample means approaches a **normal distribution**, regardless of the original shape.
+- The spread (variance) of the sample mean distribution **decreases with larger sample sizes**, reflecting $\text{Var}(\bar{X}) = \frac{\sigma^2}{n}$.
 
 ---
 
@@ -79,17 +80,17 @@ plot_sampling_distribution(binomial_results, "Binomial")
 
 The CLT is used in numerous fields:
 
-* **Quality Control**: Predicting defect rates from sample batches.
-* **Economics & Finance**: Estimating population parameters like average income or stock returns.
-* **Social Sciences**: Generalizing results from surveys.
+- **Quality Control**: Predicting defect rates from sample batches.
+- **Economics & Finance**: Estimating population parameters like average income or stock returns.
+- **Social Sciences**: Generalizing results from surveys.
 
 ---
 
 ## ✅ Deliverables Summary
 
-* ✔️ Python simulation of sampling distributions.
-* ✔️ Histograms illustrating convergence to normality.
-* ✔️ Theoretical discussion and practical relevance of the CLT.
+- ✔️ Python simulation of sampling distributions.
+- ✔️ Histograms illustrating convergence to normality.
+- ✔️ Theoretical discussion and practical relevance of the CLT.
 
 ---
 
@@ -136,8 +137,8 @@ plt.show()
 
 ### 📈 Analysis
 
-* Accuracy improves as the number of points increases.
-* Convergence is slow: error decreases as $1/\sqrt{N}$.
+- Accuracy improves as the number of points increases.
+- Convergence is slow: error decreases as $1/\sqrt{N}$.
 
 ---
 
@@ -151,10 +152,10 @@ $\pi \approx \frac{2L \cdot N}{d \cdot C}$
 
 Where:
 
-* $L$ = needle length
-* $d$ = distance between lines
-* $N$ = number of drops
-* $C$ = number of times the needle crosses a line
+- $L$ = needle length
+- $d$ = distance between lines
+- $N$ = number of drops
+- $C$ = number of times the needle crosses a line
 
 ### 🧪 Simulation
 
@@ -191,18 +192,20 @@ plt.title("Buffon’s Needle Simulation")
 plt.show()
 ```
 
+![alt text](image-1.png)
+
 ### 📈 Analysis
 
-* Buffon’s method has more noise and slower convergence.
-* Good for illustrating geometric probability.
+- Buffon’s method has more noise and slower convergence.
+- Good for illustrating geometric probability.
 
 ---
 
 ## ✅ Deliverables Summary
 
-* ✔️ Python implementations for both methods.
-* ✔️ Visualizations of point and needle distributions.
-* ✔️ Convergence analysis and comparison of accuracy.
+- ✔️ Python implementations for both methods.
+- ✔️ Visualizations of point and needle distributions.
+- ✔️ Convergence analysis and comparison of accuracy.
 
 ---
 
