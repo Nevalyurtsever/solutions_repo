@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>🚀 Problem 3: Trajectories of a Freely Released Payload Near Earth - Physics and Mathematics</title>
+<title>Problem 3 - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "\ud83d\ude80 Problem 3: Trajectories of a Freely Released Payload Near Earth";
+        var mkdocs_page_name = "Problem 3";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_3.md";
         var mkdocs_page_url = null;
       </script>
@@ -58,33 +58,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">🚀 Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
-<ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#task-1-analyze-possible-trajectories">🎯 Task 1: Analyze Possible Trajectories</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#physical-meaning">🌍 Physical Meaning</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#task-2-numerical-analysis-of-payload-path">🧮 Task 2: Numerical Analysis of Payload Path</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#equations-of-motion">🧠 Equations of Motion</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#python-simulation-trajectories-based-on-initial-conditions">🐍 Python Simulation: Trajectories Based on Initial Conditions</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#task-3-applications-and-scenarios">🧭 Task 3: Applications and Scenarios</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#real-world-implications">🔍 Real-World Implications</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#used-in">🌐 Used In:</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#task-4-simulation-tool-summary">🛠️ Task 4: Simulation Tool Summary</a>
-</li>
-</ul>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
 </li>
 </ul>
 </li>
@@ -187,7 +161,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">🚀 Problem 3: Trajectories of a Freely Released Payload Near Earth</li>
+<li class="breadcrumb-item active">Problem 3</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -195,108 +169,6 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-3-trajectories-of-a-freely-released-payload-near-earth">🚀 Problem 3: Trajectories of a Freely Released Payload Near Earth</h1>
-<hr/>
-<h2 id="task-1-analyze-possible-trajectories">🎯 Task 1: Analyze Possible Trajectories</h2>
-<h3 id="physical-meaning">🌍 Physical Meaning</h3>
-<p>When a payload is released near Earth, the path it follows depends on its initial speed and direction:</p>
-<ul>
-<li><strong>Elliptical Orbit</strong>: If the speed is less than escape velocity and directed tangentially.</li>
-<li><strong>Parabolic Trajectory</strong>: If the speed is exactly equal to escape velocity.</li>
-<li><strong>Hyperbolic Trajectory</strong>: If the speed exceeds escape velocity.</li>
-<li><strong>Suborbital</strong>: If the velocity is insufficient for orbit, it falls back to Earth.</li>
-</ul>
-<p>These outcomes are governed by the total specific mechanical energy:</p>
-<div class="arithmatex">\[
-\epsilon = \frac{v^2}{2} - \frac{GM}{r}
-\]</div>
-<ul>
-<li>$\epsilon &lt; 0$: Elliptical</li>
-<li>$\epsilon = 0$: Parabolic</li>
-<li>$\epsilon &gt; 0$: Hyperbolic</li>
-</ul>
-<hr/>
-<h2 id="task-2-numerical-analysis-of-payload-path">🧮 Task 2: Numerical Analysis of Payload Path</h2>
-<h3 id="equations-of-motion">🧠 Equations of Motion</h3>
-<p>We model motion using Newton's second law:</p>
-<div class="arithmatex">\[
-\vec{a} = -\frac{GM}{r^3} \vec{r}
-\]</div>
-<p>Numerical integration (Euler/Runge-Kutta) can be used to simulate motion step by step.</p>
-<hr/>
-<h2 id="python-simulation-trajectories-based-on-initial-conditions">🐍 Python Simulation: Trajectories Based on Initial Conditions</h2>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
-
-# Constants
-G = 6.67430e-11  # gravitational constant (m^3/kg/s^2)
-M = 5.972e24     # mass of Earth (kg)
-R_earth = 6.371e6  # radius of Earth (m)
-
-# Initial conditions
-r0 = np.array([R_earth + 400e3, 0])  # position (400 km altitude)
-v_values = [7000, 7800, 11000]  # test velocities in m/s (different scenarios)
-dt = 1  # time step (s)
-steps = 15000
-
-plt.figure(figsize=(8, 8))
-
-for v0 in v_values:
-    v = np.array([0, v0])
-    r = r0.copy()
-    trajectory = []
-
-    for _ in range(steps):
-        r_mag = np.linalg.norm(r)
-        a = -G * M * r / r_mag**3
-        v += a * dt
-        r += v * dt
-        trajectory.append(r.copy())
-
-        # stop if too far
-        if r_mag &gt; 10 * R_earth:
-            break
-
-    trajectory = np.array(trajectory)
-    plt.plot(trajectory[:, 0] / 1000, trajectory[:, 1] / 1000, label=f"v0 = {v0} m/s")
-
-# Earth for reference
-theta = np.linspace(0, 2*np.pi, 100)
-plt.plot(R_earth*np.cos(theta)/1000, R_earth*np.sin(theta)/1000, 'k')
-
-plt.xlabel("x (km)")
-plt.ylabel("y (km)")
-plt.title("Payload Trajectories Based on Initial Velocity")
-plt.grid(True)
-plt.axis("equal")
-plt.legend()
-plt.tight_layout()
-plt.show()
-</code></pre>
-<hr/>
-<h2 id="task-3-applications-and-scenarios">🧭 Task 3: Applications and Scenarios</h2>
-<h3 id="real-world-implications">🔍 Real-World Implications</h3>
-<ul>
-<li><strong>Orbital Insertion</strong>: Required velocity and direction to achieve stable orbit.</li>
-<li><strong>Reentry</strong>: Trajectories falling back to Earth due to low velocity or steep angle.</li>
-<li><strong>Escape Missions</strong>: Trajectories with $v &gt; v_{escape}$ useful for deep-space probes.</li>
-</ul>
-<h3 id="used-in">🌐 Used In:</h3>
-<ul>
-<li>Satellite deployment (e.g., Starlink)</li>
-<li>ISS resupply missions</li>
-<li>Lunar/planetary transfers</li>
-</ul>
-<hr/>
-<h2 id="task-4-simulation-tool-summary">🛠️ Task 4: Simulation Tool Summary</h2>
-<p>This simulation demonstrates how:</p>
-<ul>
-<li>Initial altitude and velocity control trajectory type</li>
-<li>Increasing velocity transitions orbit → escape</li>
-<li>Python and physics principles combine to model realistic space dynamics</li>
-</ul>
-<p>More refined tools may include Runge-Kutta methods, atmospheric drag (for lower altitudes), and multi-body interactions.</p>
-<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

@@ -58,7 +58,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_2/">Problem 2</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">🚀 Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3</a>
 </li>
 </ul>
 </li>
@@ -172,10 +172,97 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-4-interference-patterns-on-a-water-surface">🌊 Problem 4: Interference Patterns on a Water Surface</h1>
+<hr/>
+<h2 id="task-1-define-the-physical-setup">🎯 Task 1: Define the Physical Setup</h2>
+<h3 id="regular-polygon-and-source-placement">🔷 Regular Polygon and Source Placement</h3>
+<p>We consider a regular polygon—e.g., an <strong>equilateral triangle</strong>—with point sources placed at its <strong>vertices</strong> on a water surface. Each point emits <strong>circular waves</strong> with the same amplitude, frequency, and wavelength.</p>
+<hr/>
+<h2 id="task-2-mathematical-formulation-of-waves">📐 Task 2: Mathematical Formulation of Waves</h2>
+<h3 id="single-wave-expression">🧮 Single Wave Expression</h3>
+<p>A circular wave from a point source at position $(x_s, y_s)$ is described as:</p>
+<div class="arithmatex">\[
+\eta(x, y, t) = A \cos(k r - \omega t + \phi)
+\]</div>
+<p>Where:</p>
+<ul>
+<li>$\eta(x, y, t)$ is the surface displacement</li>
+<li>$A$ is amplitude</li>
+<li>$k = \frac{2\pi}{\lambda}$ is the wave number</li>
+<li>$\omega = 2\pi f$ is the angular frequency</li>
+<li>$r = \sqrt{(x - x_s)^2 + (y - y_s)^2}$ is the distance to the source</li>
+<li>$\phi$ is the phase (set to 0 for simplicity)</li>
+</ul>
+<h3 id="total-interference-superposition-principle">🧮 Total Interference (Superposition Principle)</h3>
+<p>For $N$ point sources at $(x_i, y_i)$:</p>
+<div class="arithmatex">\[
+\eta_{total}(x, y, t) = \sum_{i=1}^N A \cos(k r_i - \omega t)
+\]</div>
+<p>Where $r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}$ is the distance from point $(x, y)$ to source $i$.</p>
+<hr/>
+<h2 id="task-3-python-simulation-visualizing-interference">🐍 Task 3: Python Simulation – Visualizing Interference</h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+A = 1.0            # Amplitude
+wavelength = 1.0   # Wavelength (meters)
+freq = 1.0         # Frequency (Hz)
+k = 2 * np.pi / wavelength
+omega = 2 * np.pi * freq
+
+def generate_polygon(n_sides, radius=2.0):
+    angles = np.linspace(0, 2*np.pi, n_sides, endpoint=False)
+    return [(radius * np.cos(a), radius * np.sin(a)) for a in angles]
+
+# Grid setup
+x = np.linspace(-5, 5, 500)
+y = np.linspace(-5, 5, 500)
+X, Y = np.meshgrid(x, y)
+
+# Polygon source points
+sources = generate_polygon(3)  # Triangle
+
+# Time snapshot
+t = 0
+eta_total = np.zeros_like(X)
+
+for (x_s, y_s) in sources:
+    R = np.sqrt((X - x_s)**2 + (Y - y_s)**2)
+    eta_total += A * np.cos(k * R - omega * t)
+
+# Plotting
+plt.figure(figsize=(8, 6))
+plt.contourf(X, Y, eta_total, levels=100, cmap='coolwarm')
+plt.colorbar(label='Wave Displacement')
+plt.title('Water Surface Interference Pattern (Equilateral Triangle Sources)')
+plt.xlabel('x (m)')
+plt.ylabel('y (m)')
+plt.axis('equal')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+</code></pre>
+<hr/>
+<h2 id="task-4-interpretation-and-applications">🧭 Task 4: Interpretation and Applications</h2>
+<h3 id="interference-analysis">🔍 Interference Analysis</h3>
+<ul>
+<li><strong>Constructive Interference</strong>: Peaks where wave crests meet</li>
+<li><strong>Destructive Interference</strong>: Nulls where crest meets trough</li>
+<li><strong>Fringe Patterns</strong>: Formed based on polygon geometry and wavelength</li>
+</ul>
+<h3 id="applications">🌐 Applications</h3>
+<ul>
+<li>Sound systems (phase control)</li>
+<li>Water wave tanks (research and education)</li>
+<li>Optics (laser interference from multiple slits)</li>
+<li>Antenna arrays</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../2%20Gravity/Problem_3/" title="🚀 Problem 3: Trajectories of a Freely Released Payload Near Earth"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../../2%20Gravity/Problem_3/" title="Problem 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../../4%20Electromagnetism/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
