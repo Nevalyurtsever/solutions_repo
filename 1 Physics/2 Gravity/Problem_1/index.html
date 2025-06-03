@@ -55,6 +55,44 @@
 <li class="toctree-l1 current"><a class="reference internal current">2 Gravity</a>
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#task-1-derive-the-relationship-between-orbital-period-and-radius">🔢 Task 1: Derive the relationship between orbital period and radius</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#theoretical-background">🔬 Theoretical Background</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#python-code-keplers-law-formula-simulation">💻 Python Code – Kepler’s Law Formula Simulation</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2-implications-for-astronomy">🛰️ Task 2: Implications for Astronomy</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#explanation">🌌 Explanation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#python-code-mass-estimation-from-orbital-data">💻 Python Code – Mass Estimation from Orbital Data</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-3-analyze-real-world-examples">🌍 Task 3: Analyze Real-World Examples</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">📌 Examples</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#python-code-compare-planets-simplified">💻 Python Code – Compare Planets (Simplified)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-4-implement-simulation-extend-to-elliptical-orbits">💻 Task 4: Implement Simulation &amp; Extend to Elliptical Orbits</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#simulation-of-circular-orbits">🧪 Simulation of Circular Orbits</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#elliptical-orbits-generalization">🟣 Elliptical Orbits: Generalization</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#optional-code-elliptical-orbit-plot-2d">💻 Optional Code – Elliptical Orbit Plot (2D)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">✅ Summary</a>
+</li>
+</ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
 </li>
@@ -169,7 +207,196 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>dfd</p>
+<p>Tamam Neval! İndi tapşırığı sənin istədiyin formata tam uyğun olaraq hazırlayıram:
+— Hər <strong>task</strong> üçün <strong>öz nəzəri hissəsi və kodu</strong> olacaq.
+— İngiliscə yazılır.
+— Kompakt, aydın və düzgün struktura malikdir.</p>
+<hr/>
+<h2 id="problem-1-orbital-period-and-orbital-radius">📘 Problem 1: Orbital Period and Orbital Radius</h2>
+<hr/>
+<h3 id="task-1-derive-the-relationship-between-orbital-period-and-radius">🔢 <strong>Task 1: Derive the relationship between orbital period and radius</strong></h3>
+<h4 id="theoretical-background">🔬 Theoretical Background</h4>
+<p>From Newton’s Law of Gravitation and centripetal force for circular orbits:</p>
+<div class="arithmatex">\[
+F_g = \frac{G M m}{r^2}, \quad F_c = \frac{m v^2}{r}
+\]</div>
+<p>Equating both:</p>
+<div class="arithmatex">\[
+\frac{G M m}{r^2} = \frac{m v^2}{r} \Rightarrow v^2 = \frac{G M}{r}
+\]</div>
+<p>Orbital period <span class="arithmatex">\(T\)</span> is related to velocity:</p>
+<div class="arithmatex">\[
+T = \frac{2\pi r}{v} \Rightarrow T^2 = \frac{4\pi^2 r^2}{v^2}
+\]</div>
+<p>Substitute <span class="arithmatex">\(v^2\)</span>:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4\pi^2 r^3}{G M}
+\Rightarrow \boxed{T^2 \propto r^3}
+\]</div>
+<hr/>
+<h4 id="python-code-keplers-law-formula-simulation">💻 Python Code – Kepler’s Law Formula Simulation</h4>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+G = 6.67430e-11      # gravitational constant (m^3 kg^-1 s^-2)
+M = 5.972e24         # mass of Earth (kg)
+
+# Define orbital radius range (m)
+radii = np.linspace(7e6, 4.2e7, 100)
+
+# Calculate orbital period using the derived formula
+T = 2 * np.pi * np.sqrt(radii**3 / (G * M))
+
+# Plot period vs radius^1.5 to show linearity
+plt.figure(figsize=(7,5))
+plt.plot(radii**1.5, T, color='blue')
+plt.xlabel("$r^{1.5}$ [m$^{1.5}$]")
+plt.ylabel("Orbital Period $T$ [s]")
+plt.title("Verification of $T \\propto r^{1.5}$ (Kepler’s 3rd Law)")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+</code></pre>
+<hr/>
+<h3 id="task-2-implications-for-astronomy">🛰️ <strong>Task 2: Implications for Astronomy</strong></h3>
+<h4 id="explanation">🌌 Explanation</h4>
+<p>Kepler's Third Law is fundamental for understanding how celestial bodies move and interact. It allows astronomers to:</p>
+<ul>
+<li>🪐 <strong>Determine masses</strong> of planets and stars by observing satellite orbits.</li>
+<li>🌍 <strong>Estimate distances</strong> in solar and extrasolar systems.</li>
+<li>🛰️ <strong>Design satellite orbits</strong> (e.g. GPS, geostationary satellites).</li>
+<li>🔭 <strong>Detect exoplanets</strong> by measuring how a star wobbles due to an unseen companion.</li>
+</ul>
+<hr/>
+<h4 id="python-code-mass-estimation-from-orbital-data">💻 Python Code – Mass Estimation from Orbital Data</h4>
+<p>Example: Estimate Earth's mass from Moon’s orbit.</p>
+<pre><code class="language-python"># Moon data
+T_moon = 27.3 * 24 * 3600     # seconds
+r_moon = 3.84e8               # meters
+
+# Rearranged formula: M = 4π²r³ / (GT²)
+M_earth_est = 4 * np.pi**2 * r_moon**3 / (G * T_moon**2)
+print(f"Estimated Earth mass: {M_earth_est:.2e} kg")
+</code></pre>
+<hr/>
+<h3 id="task-3-analyze-real-world-examples">🌍 <strong>Task 3: Analyze Real-World Examples</strong></h3>
+<h4 id="examples">📌 Examples</h4>
+<ol>
+<li>
+<p><strong>Moon orbiting Earth</strong></p>
+</li>
+<li>
+<p><span class="arithmatex">\(r = 3.84 \times 10^8 \, \text{m}, \; T = 27.3 \, \text{days}\)</span></p>
+</li>
+<li>
+<p>From this, Earth's mass can be estimated accurately.</p>
+</li>
+<li>
+<p><strong>Earth orbiting Sun</strong></p>
+</li>
+<li>
+<p><span class="arithmatex">\(r = 1.496 \times 10^{11} \, \text{m}, \; T = 365.25 \, \text{days}\)</span></p>
+</li>
+<li>
+<p>Useful for measuring astronomical units (AU).</p>
+</li>
+<li>
+<p><strong>Mars vs Jupiter</strong></p>
+</li>
+<li>
+<p>Jupiter’s orbital period is ≈11.9 years, and its distance is much greater — validating <span class="arithmatex">\(T^2 \propto r^3\)</span>.</p>
+</li>
+</ol>
+<hr/>
+<h4 id="python-code-compare-planets-simplified">💻 Python Code – Compare Planets (Simplified)</h4>
+<pre><code class="language-python"># Orbital data for planets (AU and years)
+r_AU = np.array([0.39, 0.72, 1.0, 1.52, 5.2, 9.58])    # Mercury to Saturn
+T_years = np.array([0.24, 0.61, 1.0, 1.88, 11.86, 29.45])
+
+# Convert to SI
+r_m = r_AU * 1.496e11
+T_s = T_years * 365.25 * 24 * 3600
+
+# Check T² vs r³
+plt.figure(figsize=(7,5))
+plt.plot(r_m**3, T_s**2, 'o-', color='green')
+plt.xlabel("$r^3$ [m³]")
+plt.ylabel("$T^2$ [s²]")
+plt.title("Solar System: $T^2$ vs $r^3$")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+</code></pre>
+<hr/>
+<h3 id="task-4-implement-simulation-extend-to-elliptical-orbits">💻 <strong>Task 4: Implement Simulation &amp; Extend to Elliptical Orbits</strong></h3>
+<h4 id="simulation-of-circular-orbits">🧪 Simulation of Circular Orbits</h4>
+<p>Already shown above — the code verifies <span class="arithmatex">\(T^2 \propto r^3\)</span> with circular orbits around Earth and Sun.</p>
+<hr/>
+<h4 id="elliptical-orbits-generalization">🟣 Elliptical Orbits: Generalization</h4>
+<p>For <strong>elliptical orbits</strong>, Kepler’s Law still applies:</p>
+<div class="arithmatex">\[
+T^2 \propto a^3
+\]</div>
+<p>Where <span class="arithmatex">\(a\)</span> is the <strong>semi-major axis</strong>. This generalization allows the same method to work for:</p>
+<ul>
+<li>Planets with <strong>eccentric</strong> orbits (e.g. Pluto)</li>
+<li>Comets like Halley’s comet</li>
+<li>Binary star systems</li>
+</ul>
+<hr/>
+<h4 id="optional-code-elliptical-orbit-plot-2d">💻 Optional Code – Elliptical Orbit Plot (2D)</h4>
+<pre><code class="language-python"># Sample elliptical orbit
+a = 1.5e11   # semi-major axis
+e = 0.6      # eccentricity
+theta = np.linspace(0, 2*np.pi, 1000)
+r = (a * (1 - e**2)) / (1 + e * np.cos(theta))
+
+# Convert to Cartesian
+x = r * np.cos(theta)
+y = r * np.sin(theta)
+
+plt.figure(figsize=(6,6))
+plt.plot(x, y, label=f"e={e}")
+plt.plot([0], [0], 'yo', label="Focus (Sun)")
+plt.title("Elliptical Orbit")
+plt.xlabel("x [m]")
+plt.ylabel("y [m]")
+plt.axis('equal')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
+</code></pre>
+<hr/>
+<h3 id="summary">✅ Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Covered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Derivation of Kepler’s Law</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>2. Implications in Astronomy</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>3. Real-World Examples</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>4. Computational Model + Elliptical Case</td>
+<td>✔️</td>
+</tr>
+</tbody>
+</table>
+<p>Let me know if you want this in <code>.ipynb</code> (Jupyter notebook), <code>.py</code>, or <code>.md</code> format for submission. Ready for the next problem if you are!</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
