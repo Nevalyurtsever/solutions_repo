@@ -1,15 +1,13 @@
 ---
-
 ## 🚀 Problem 2: Escape Velocities and Cosmic Velocities
-
 ---
 
 ### 🧠 **Task 1: Define the first, second, and third cosmic velocities**
 
 #### 🔹 First Cosmic Velocity (Orbital Velocity)
 
-* **Definition**: The minimum speed required to enter a stable circular orbit around a celestial body just above its surface.
-* **Formula**:
+- **Definition**: The minimum speed required to enter a stable circular orbit around a celestial body just above its surface.
+- **Formula**:
 
 $$
     v_1 = \sqrt{\frac{G M}{r}}
@@ -17,8 +15,8 @@ $$
 
 #### 🔹 Second Cosmic Velocity (Escape Velocity)
 
-* **Definition**: The minimum speed needed to escape a celestial body’s gravitational field entirely, without further propulsion.
-* **Formula**:
+- **Definition**: The minimum speed needed to escape a celestial body’s gravitational field entirely, without further propulsion.
+- **Formula**:
 
 $$
     v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2 G M}{r}}
@@ -26,8 +24,8 @@ $$
 
 #### 🔹 Third Cosmic Velocity (Interstellar Escape)
 
-* **Definition**: The velocity needed to escape the gravitational pull of a planetary system (e.g., the Sun).
-* **Approximation**:
+- **Definition**: The velocity needed to escape the gravitational pull of a planetary system (e.g., the Sun).
+- **Approximation**:
 
 $$
     v_3 = \sqrt{v_{esc\_planet}^2 + v_{esc\_sun}^2}
@@ -52,9 +50,9 @@ $$
     v = \sqrt{\frac{2 G M}{r}}
 $$
 
-* $G$: Gravitational constant
-* $M$: Mass of the celestial body
-* $r$: Radius (distance from center of mass)
+- $G$: Gravitational constant
+- $M$: Mass of the celestial body
+- $r$: Radius (distance from center of mass)
 
 ---
 
@@ -127,13 +125,15 @@ plt.show()
 
 ---
 
+![alt text](image-14.png)
+
 ### 🛰️ **Task 4: Importance in Space Exploration**
 
 #### 🚀 Applications:
 
-* **First Cosmic Velocity**: Used to launch satellites into orbit.
-* **Second Cosmic Velocity**: Required for lunar and interplanetary missions.
-* **Third Cosmic Velocity**: Enables spacecraft to escape the Solar System (e.g., Voyager missions).
+- **First Cosmic Velocity**: Used to launch satellites into orbit.
+- **Second Cosmic Velocity**: Required for lunar and interplanetary missions.
+- **Third Cosmic Velocity**: Enables spacecraft to escape the Solar System (e.g., Voyager missions).
 
 #### 🛸 Summary Table
 
@@ -144,4 +144,3 @@ plt.show()
 | 3rd (v3)        | Leaving a planetary system | Voyager 1 & 2, New Horizons |
 
 Understanding these velocities ensures efficient fuel usage, mission planning, and reaching new frontiers in space exploration.
-
