@@ -364,6 +364,8 @@ plt.show()
 
 ---
 
+![alt text](image-18.png)
+
 ### 📊 Analysis
 
 - Analyze impact of initial speed on orbit type.
