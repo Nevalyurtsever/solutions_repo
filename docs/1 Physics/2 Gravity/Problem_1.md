@@ -1,9 +1,3 @@
-Tamam Neval! İndi tapşırığı sənin istədiyin formata tam uyğun olaraq hazırlayıram:
-— Hər **task** üçün **öz nəzəri hissəsi və kodu** olacaq.
-— İngiliscə yazılır.
-— Kompakt, aydın və düzgün struktura malikdir.
-
----
 
 ## 📘 Problem 1: Orbital Period and Orbital Radius
 
