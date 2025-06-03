@@ -191,6 +191,8 @@ plt.show()
 
 ---
 
+![alt text](image-13.png)
+
 ### ✅ Summary
 
 | Task                                     | Covered |
