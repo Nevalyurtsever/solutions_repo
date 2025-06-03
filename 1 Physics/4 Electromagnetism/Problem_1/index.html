@@ -172,6 +172,104 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-5-simulating-the-effects-of-the-lorentz-force">🧲 Problem 5: Simulating the Effects of the Lorentz Force</h1>
+<hr/>
+<h2 id="task-1-applications-of-the-lorentz-force">🎯 Task 1: Applications of the Lorentz Force</h2>
+<h3 id="systems-where-the-lorentz-force-is-crucial">⚡ Systems Where the Lorentz Force is Crucial</h3>
+<ul>
+<li><strong>Particle Accelerators</strong>: Control particle trajectories using magnetic and electric fields.</li>
+<li><strong>Mass Spectrometers</strong>: Separate ions based on charge-to-mass ratio.</li>
+<li><strong>Magnetic Confinement Fusion</strong>: Confine plasma using magnetic fields.</li>
+<li><strong>Cathode Ray Tubes</strong>: Use electric and magnetic fields to deflect electron beams.</li>
+</ul>
+<h3 id="role-of-fields">🧭 Role of Fields</h3>
+<ul>
+<li><strong>Electric Fields (<span class="arithmatex">\(\vec{E}\)</span>)</strong>: Accelerate particles linearly.</li>
+<li><strong>Magnetic Fields (<span class="arithmatex">\(\vec{B}\)</span>)</strong>: Curve particle trajectories due to perpendicular force <span class="arithmatex">\(\vec{F} = q \vec{v} \times \vec{B}\)</span>.</li>
+</ul>
+<hr/>
+<h2 id="task-2-simulating-motion-under-lorentz-force">🧮 Task 2: Simulating Motion under Lorentz Force</h2>
+<h3 id="equations-of-motion">🔢 Equations of Motion</h3>
+<p>Using Newton's second law:</p>
+<p><span class="arithmatex">\(m \frac{d\vec{v}}{dt} = q(\vec{E} + \vec{v} \times \vec{B})\)</span></p>
+<h3 id="python-code-particle-simulation-in-uniform-fields">🐍 Python Code: Particle Simulation in Uniform Fields</h3>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Constants
+q = 1.6e-19   # charge (C)
+m = 9.11e-31  # mass (kg)
+B = np.array([0, 0, 1])  # Tesla
+E = np.array([0, 0, 0])  # V/m
+v0 = np.array([1e6, 0, 0])  # initial velocity (m/s)
+r0 = np.array([0, 0, 0])
+dt = 1e-11
+steps = 5000
+
+v = v0.copy()
+r = r0.copy()
+trajectory = [r.copy()]
+
+for _ in range(steps):
+    F = q * (E + np.cross(v, B))
+    a = F / m
+    v += a * dt
+    r += v * dt
+    trajectory.append(r.copy())
+
+trajectory = np.array(trajectory)
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot(trajectory[:,0], trajectory[:,1], trajectory[:,2])
+ax.set_title("Trajectory of Charged Particle in Magnetic Field")
+ax.set_xlabel("x (m)")
+ax.set_ylabel("y (m)")
+ax.set_zlabel("z (m)")
+plt.tight_layout()
+plt.show()
+</code></pre>
+<hr/>
+<h2 id="task-3-parameter-exploration">🔍 Task 3: Parameter Exploration</h2>
+<h3 id="modifiable-parameters">🔄 Modifiable Parameters</h3>
+<ul>
+<li><strong>Magnetic Field Strength (<span class="arithmatex">\(\vec{B}\)</span>)</strong></li>
+<li><strong>Electric Field Strength (<span class="arithmatex">\(\vec{E}\)</span>)</strong></li>
+<li><strong>Initial Velocity (<span class="arithmatex">\(\vec{v}_0\)</span>)</strong></li>
+<li><strong>Particle Charge (<span class="arithmatex">\(q\)</span>) and Mass (<span class="arithmatex">\(m\)</span>)</strong></li>
+</ul>
+<h3 id="effects-observed">🔄 Effects Observed</h3>
+<ul>
+<li><strong>Circular motion</strong> with <span class="arithmatex">\(\vec{B}\)</span> only.</li>
+<li><strong>Helical motion</strong> with <span class="arithmatex">\(\vec{v}_z \neq 0\)</span>.</li>
+<li><strong>Drift motion</strong> when <span class="arithmatex">\(\vec{E} \perp \vec{B}\)</span>.</li>
+</ul>
+<hr/>
+<h2 id="task-4-visualization-of-results">📊 Task 4: Visualization of Results</h2>
+<ul>
+<li><strong>2D/3D plots</strong> of trajectories reveal motion types.</li>
+<li><strong>Larmor Radius</strong>:
+  <span class="arithmatex">\(r_L = \frac{mv_\perp}{qB}\)</span></li>
+<li><strong>Drift Velocity</strong> (for <span class="arithmatex">\(\vec{E} \perp \vec{B}\)</span>):
+  <span class="arithmatex">\(\vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}\)</span></li>
+</ul>
+<hr/>
+<h2 id="practical-context-applications">🧠 Practical Context &amp; Applications</h2>
+<h3 id="real-world-systems">⚙️ Real-World Systems</h3>
+<ul>
+<li><strong>Cyclotrons</strong>: Use <span class="arithmatex">\(\vec{B}\)</span> to spiral particles outward.</li>
+<li><strong>Mass Spectrometers</strong>: Particle deflection radius reveals mass/charge.</li>
+<li><strong>Magnetic Traps</strong>: Confine plasma in fusion experiments.</li>
+</ul>
+<hr/>
+<h2 id="extensions-and-improvements">🚀 Extensions and Improvements</h2>
+<ul>
+<li>Include <strong>non-uniform magnetic fields</strong>.</li>
+<li>Add <strong>relativistic corrections</strong> at high speeds.</li>
+<li>Visualize <strong>multi-particle interactions</strong> or <strong>beam dynamics</strong>.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
