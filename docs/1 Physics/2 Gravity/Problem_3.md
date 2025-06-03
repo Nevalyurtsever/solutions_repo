@@ -67,6 +67,8 @@ plot_sampling_distribution(binomial_results, "Binomial")
 
 ---
 
+![alt text](image-15.png)
+
 ## 🔬 Task 3: Parameter Exploration
 
 - As sample size increases, the distribution of sample means approaches a **normal distribution**, regardless of the original shape.
@@ -133,6 +135,8 @@ plt.legend()
 plt.show()
 ```
 
+![alt text](image-16.png)
+
 ### 📈 Analysis
 
 - Accuracy improves as the number of points increases.
@@ -189,6 +193,8 @@ for i in range(11):
 plt.title("Buffon’s Needle Simulation")
 plt.show()
 ```
+
+![alt text](image-17.png)
 
 ### 📈 Analysis
 
