@@ -1,4 +1,5 @@
 # Problem 1
+
 # 📈 Problem 5: Exploring the Central Limit Theorem through Simulations
 
 ---
@@ -70,8 +71,8 @@ plot_sampling_distribution(binomial_results, "Binomial")
 
 ## 🔬 Task 3: Parameter Exploration
 
-* As sample size increases, the distribution of sample means approaches a **normal distribution**, regardless of the original shape.
-* The spread (variance) of the sample mean distribution **decreases with larger sample sizes**, reflecting $\text{Var}(\bar{X}) = \frac{\sigma^2}{n}$.
+- As sample size increases, the distribution of sample means approaches a **normal distribution**, regardless of the original shape.
+- The spread (variance) of the sample mean distribution **decreases with larger sample sizes**, reflecting $\text{Var}(\bar{X}) = \frac{\sigma^2}{n}$.
 
 ---
 
@@ -79,17 +80,17 @@ plot_sampling_distribution(binomial_results, "Binomial")
 
 The CLT is used in numerous fields:
 
-* **Quality Control**: Predicting defect rates from sample batches.
-* **Economics & Finance**: Estimating population parameters like average income or stock returns.
-* **Social Sciences**: Generalizing results from surveys.
+- **Quality Control**: Predicting defect rates from sample batches.
+- **Economics & Finance**: Estimating population parameters like average income or stock returns.
+- **Social Sciences**: Generalizing results from surveys.
 
 ---
 
 ## ✅ Deliverables Summary
 
-* ✔️ Python simulation of sampling distributions.
-* ✔️ Histograms illustrating convergence to normality.
-* ✔️ Theoretical discussion and practical relevance of the CLT.
+- ✔️ Python simulation of sampling distributions.
+- ✔️ Histograms illustrating convergence to normality.
+- ✔️ Theoretical discussion and practical relevance of the CLT.
 
 ---
 
@@ -136,10 +137,12 @@ plt.show()
 
 ### 📈 Analysis
 
-* Accuracy improves as the number of points increases.
-* Convergence is slow: error decreases as $1/\sqrt{N}$.
+- Accuracy improves as the number of points increases.
+- Convergence is slow: error decreases as $1/\sqrt{N}$.
 
 ---
+
+![alt text](image.png)
 
 ## 🧵 Part 2: Estimating $\pi$ Using Buffon’s Needle
 
@@ -151,10 +154,10 @@ $\pi \approx \frac{2L \cdot N}{d \cdot C}$
 
 Where:
 
-* $L$ = needle length
-* $d$ = distance between lines
-* $N$ = number of drops
-* $C$ = number of times the needle crosses a line
+- $L$ = needle length
+- $d$ = distance between lines
+- $N$ = number of drops
+- $C$ = number of times the needle crosses a line
 
 ### 🧪 Simulation
 
@@ -191,18 +194,20 @@ plt.title("Buffon’s Needle Simulation")
 plt.show()
 ```
 
+![alt text](image-1.png)
+
 ### 📈 Analysis
 
-* Buffon’s method has more noise and slower convergence.
-* Good for illustrating geometric probability.
+- Buffon’s method has more noise and slower convergence.
+- Good for illustrating geometric probability.
 
 ---
 
 ## ✅ Deliverables Summary
 
-* ✔️ Python implementations for both methods.
-* ✔️ Visualizations of point and needle distributions.
-* ✔️ Convergence analysis and comparison of accuracy.
+- ✔️ Python implementations for both methods.
+- ✔️ Visualizations of point and needle distributions.
+- ✔️ Convergence analysis and comparison of accuracy.
 
 ---
 
@@ -220,20 +225,20 @@ Measure the acceleration $g$ due to gravity using a pendulum and analyze the unc
 
 #### 🧰 Materials:
 
-* String (1–1.5 m)
-* Small weight
-* Stopwatch
-* Ruler or measuring tape
+- String (1–1.5 m)
+- Small weight
+- Stopwatch
+- Ruler or measuring tape
 
 #### 🛠️ Setup:
 
-* Suspend the pendulum.
-* Measure length $L$ from pivot to center of mass. If the resolution of the tape is 1 mm, uncertainty is $\delta L = 0.5 \text{ mm}$.
+- Suspend the pendulum.
+- Measure length $L$ from pivot to center of mass. If the resolution of the tape is 1 mm, uncertainty is $\delta L = 0.5 \text{ mm}$.
 
 #### 🕰️ Data Collection:
 
-* Displace the pendulum (<15°) and release.
-* Measure time for 10 oscillations. Repeat 10 times.
+- Displace the pendulum (<15°) and release.
+- Measure time for 10 oscillations. Repeat 10 times.
 
 ```python
 import numpy as np
@@ -267,23 +272,20 @@ print(f"g = {g:.4f} ± {u_g:.4f} m/s²")
 
 ### 📊 Analysis
 
-* Compare measured $g$ with standard 9.80665 m/s².
-* Discuss impact of:
+- Compare measured $g$ with standard 9.80665 m/s².
+- Discuss impact of:
 
-  * Stopwatch resolution
-  * Timing variability
-  * Length measurement
-  * Assumption of small-angle approximation
+  - Stopwatch resolution
+  - Timing variability
+  - Length measurement
+  - Assumption of small-angle approximation
 
 ---
 
 ## ✅ Deliverables Summary
 
-* ✔️ Table of raw data: $L, \delta L, T_{10}, \bar{T}_{10}, \sigma, \delta \bar{T}$
-* ✔️ Final value of $g$ with uncertainty
-* ✔️ Detailed uncertainty discussion
+- ✔️ Table of raw data: $L, \delta L, T_{10}, \bar{T}_{10}, \sigma, \delta \bar{T}$
+- ✔️ Final value of $g$ with uncertainty
+- ✔️ Detailed uncertainty discussion
 
 ---
-
-
-
