@@ -1,4 +1,5 @@
 # Problem 1
+
 # 📈 Problem 5: Exploring the Central Limit Theorem through Simulations
 
 ---
@@ -68,10 +69,12 @@ plot_sampling_distribution(binomial_results, "Binomial")
 
 ---
 
+![alt text](image.png)
+
 ## 🔬 Task 3: Parameter Exploration
 
-* As sample size increases, the distribution of sample means approaches a **normal distribution**, regardless of the original shape.
-* The spread (variance) of the sample mean distribution **decreases with larger sample sizes**, reflecting $\text{Var}(\bar{X}) = \frac{\sigma^2}{n}$.
+- As sample size increases, the distribution of sample means approaches a **normal distribution**, regardless of the original shape.
+- The spread (variance) of the sample mean distribution **decreases with larger sample sizes**, reflecting $\text{Var}(\bar{X}) = \frac{\sigma^2}{n}$.
 
 ---
 
@@ -79,19 +82,16 @@ plot_sampling_distribution(binomial_results, "Binomial")
 
 The CLT is used in numerous fields:
 
-* **Quality Control**: Predicting defect rates from sample batches.
-* **Economics & Finance**: Estimating population parameters like average income or stock returns.
-* **Social Sciences**: Generalizing results from surveys.
+- **Quality Control**: Predicting defect rates from sample batches.
+- **Economics & Finance**: Estimating population parameters like average income or stock returns.
+- **Social Sciences**: Generalizing results from surveys.
 
 ---
 
 ## ✅ Deliverables Summary
 
-* ✔️ Python simulation of sampling distributions.
-* ✔️ Histograms illustrating convergence to normality.
-* ✔️ Theoretical discussion and practical relevance of the CLT.
+- ✔️ Python simulation of sampling distributions.
+- ✔️ Histograms illustrating convergence to normality.
+- ✔️ Theoretical discussion and practical relevance of the CLT.
 
 ---
-
-
-
